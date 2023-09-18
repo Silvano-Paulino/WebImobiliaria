@@ -1,0 +1,1876 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    	Painel Administrativo
+    </title>
+    <script>
+        var loaderFile = function(event) {
+           
+           /* var read = new FileReader();
+            console.log(read);
+            read.readAsDataURL(event.target.files[0]); */
+            console.log('Vamos');
+     }
+
+    </script>
+    <link rel="stylesheet"  href="css/estilo.css" />    
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="nucleo/css/nucleo.css" type="text/css"/>
+    <script src="js/jquery-3.3.1.js"  ></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/modal.js"  ></script>
+    
+    
+</head>
+<body>
+
+
+    
+
+
+    <!--  Alterar Imagem - Modal -->
+    <div class="fundoModalDash escondeModal cadastroImovel"  id="idUploadModalImgImovel">
+        <div class="assumeModal" >
+            <div class="contentorModalImgImovel">
+                <div class="divHeaderModalDash" >
+                    <h3 class="tituloModalDash" >Alterar Imagem do Imóvel</h3>
+                    <button class="btCloseModalDash" id="fechaLogoImg" >x</button>
+                </div>
+                <div class="divBodyModalDash" >
+                    <div class="divCorpoFoto" >
+
+                        <div class="caixaFoto" >
+                            
+                            <div class="contentorAba" >
+                                <div class="elementoAbaFoto">
+                                    <button class="abaFotoPrincipal fotoActivo" >Principal<span class="bordaFoto" ></span></button>
+                                    <button class="abaFotoPrincipal fotoInativo" >Planta</button>
+                                    <button class="abaFotoPrincipal fotoInativo" >Demais Fotos</button>
+                                </div>
+                                <div class="contentorPaineisFotosDash" >
+                                    <div class="painelFoto painelFotoActivo "> 
+                                        <div class="contentorInputIMGUpload" >
+                                            <div class="divUploadComponentes"  >
+                                                
+                                                <!-- Contentor da imagem -->
+                                                <div class="contentorImagemUpload" >
+                                                    <div class="caixaAcoesImg" >                                            
+                                                        <label class="linkPuxaCloud" for="fileCloudIm" id="idLinkPuxaCloud" >
+                                                            <div class="conteudoIconeCloud" ><i class="fa fa-cloud-upload" ></i></div>
+                                                            <div class="conteudoTextCloud" ><span class="spanCloud" >Escolher imagem para alteração</span></div>
+                                                        </label>
+                                                        <input type="file" name="imgCloud" id="fileCloudIm"  />
+                                                    </div>                                                                                                                                                          
+                                                </div>
+        
+                                                 <!-- Contentor da botão -->
+                                                <div class="divBtUploadBD" >
+                                                    <button class="btnModalIm btnModalIm-cancelar" >Cancelar</button>
+                                                    <button class="btnModalIm btnModalIm-salvar" >Salvar</button>
+                                                </div>                                                                                                      
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="painelFoto painelFotoInativo"> Foto Planta</div>
+                                    <div class="painelFoto painelFotoInativo "> Demais Fotos</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Apenas Imóveis-->
+    <div class="fundoModalDash escondeModal cadastroImovel"  id="idFundoModal">
+        <div class="assumeModal" >
+            <div class="contentorMdodalImovelDash">
+                <div class="divHeaderModalDash" >
+                    <h3 class="tituloModalDash" >Cadastro de Imóvel</h3>
+                    <button class="btCloseModalDash" id="fechaLogo" >x</button>
+                </div>
+                <div class="divBodyModalDash" >
+
+
+                    <!-- Im significa Imóvel abreviatura criada por: Lenister -->
+                    <div class="bodyGeralIm" >
+
+                        <!--formulario geral -->
+                        <form class="formDashImovel" action="receptor.php" method="POST" >                                                        
+                            <div class="modalDash  modalDahs-SaveImovel" >
+
+                                <!---Aqui tem o imóvel inserido resumido-->
+                                <div class="caixaModalDash caixaModalDash-imovelResumo caixaAlturaIm" >
+                                    <div class="divResumoIm  divResumoIm-divImg" >
+                                        <div class="caixaImgResumo" id="caixoteImgUpload" >
+                                            <img src="" alt="" id="imgPreview" name="imgResumoIm" />
+                                        </div>
+                                        <div class="caixaAcoesImg" >                                            
+                                            <label class="linkPuxaCloud" for="fileCloudIm" id="idLinkPuxaCloud" >
+                                                <div class="conteudoIconeCloud" ><i class="fa fa-cloud-upload" ></i></div>
+                                                <div class="conteudoTextCloud" ><span class="spanCloud" >Carrega aqui uma imagem principal do Imóvel</span></div>
+                                            </label>
+                                            <input onchange="" type="file" accept="image/*" name="imgCloud" id="fileCloudIm"  />
+                                        </div>
+                                    </div>
+                                    <div class="conteudoContentorImResumo" >
+                                        
+                                        <div class="divResumoIm divResumoIm-conteudo1" >
+                                            <div class="dadosImoveisResumo dadosImoveisResumo-parte1" >
+    
+                                                <!-- Im significa Imóvel abreviatura criada por: Lenister -->
+                                                <div><span name="" class="textoDadosImResumo" >Nome:</span><span class="textoDadosImResumo resulImResumo" name="tituloImovel" id="idTitulImResumo" >  </span></div>
+                                                <div><span name="" class="textoDadosImResumo" >Tipo de Imóvel:</span><span class="textoDadosImResumo resulImResumo" name="tipoIm" id="idTipoIm"  >  </span></div>
+                                                <div><span name="" class="textoDadosImResumo" >Condição do imóvel:</span><span class="textoDadosImResumo resulImResumo" name="condicaoIm" id="idCondicaoIm"  >  </span></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="divReesumoIm divResumoIm-conteudo2" >
+                                            <div class="dadosImoveisResumo dadosImoveisResumo-parte2" >
+    
+                                                <!-- Im significa Imóvel abreviatura criada por: Lenister -->
+                                                <div><span name="" class="textoDadosImResumo" >Status:</span><span class="textoDadosImResumo resulImResumo" name="statusIm" id="idStatusIm"  ></span></div>
+                                                <div><span name="" class="textoDadosImResumo" >Proprietário:</span><span class="textoDadosImResumo resulImResumo" name="clienteIm" id="idClienteIm"  >  </span></div>
+                                                <div><span name="" class="textoDadosImResumo" >Endereço:</span><span class="textoDadosImResumo resulImResumo" name="enderecoIm" id="idEnderecoIm"  >  </span></div>
+                                            </div>                                                                                
+                                        </div>
+
+                                        <div class="divReesumoIm divResumoIm-conteudo3" >
+
+                                            <!-- Im significa Imóvel abreviatura criada por: Lenister -->
+                                            <div><span name="" class="textoDadosImResumo" >Valor:</span><span class="textoDadosImResumo resulImResumo textoDadosImResumo-valor" name="valorIm" id="idValorIm"  >  </span></div>                                          
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                </div>
+
+
+                                <!--Aqui tem o formulário todos da inserção de dados do imóvel-->
+                                <div class="caixaModalDash caixaModalDash-inforCentral caixaAlturaIm" >
+
+
+                                    <!--Todos Impostes estão aqui!-->
+
+                                    <!--Header Inputs-->
+                                    <div class="caixaHeaderImBody" >
+                                        <nav class="navHeaderIm" >
+                                            <a class="linkNavIm" id="idLinkModalIm" ><i class="fa fa-home"  ></i> Geral</a>
+                                            <a class="linkNavIm" ><i class="ni ni-pin-3" ></i> Endereço</a>
+                                            <a class="linkNavIm" ><i class="ni ni-planet" ></i> Característica</a>
+                                            <a class="linkNavIm" ><i class="fa fa-image" ></i> Mais fotos</a>                                            
+                                        </nav>
+                                    </div>
+
+                                    <!--Body Inputs-->
+                                    <div class="caixaBodyImBody" >
+                                        <div class="caixaFormIm caixaFormIm-divLinkGeralIm" >
+                                            <div class="ctDivForm ctDivForm-geralInputs">
+                                                <div class="ctInputIm styleGoogle grandeInput">                                                    
+                                                    <input type="text" autocomplete="off" placeholder=" " class="inputGoogle" name="titulo" id="emailIm" />
+                                                    <label for="emailIm" class="labelStyleGoogle">Titulo</label>
+                                                </div>
+
+                                                <!-- Im significa Imóvel abreviatura criada por: Lenister -->
+
+                                                <!--Campo Select para Selecionar qual é a condição a ser gravada-->
+                                                <div class="ctInputIm styleGoogle medioInput">                                                    
+                                                    <select name="condicaoIm" class="selectCondicaoIm" id="idCondicaoIm" >
+                                                        <option value="1" >Usado</option>
+                                                        <option value="2" >Novo</option>
+                                                        <option value="3" >Na planta</option>
+                                                        <option value="4" >Inacabado</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="ctDivForm ctDivForm-geralInputs divNegocio">
+                                                <!--Área de negociação-->
+                                                <div class="divNegocioIm mesmoWidthIm" >
+                                                    <h3>Negócio</h3>
+                                                    <div class="contentorCheckNeg contentorCheckNeg-venda" >
+                                                        <input type="checkbox" value="venda" class="checkStatus" name="status" id="checkboxVenda" >
+                                                        <label for="checkboxVenda" class="labelCheck" >Para Venda</label>
+                                                    </div>
+                                                    <div class="contentorCheckNeg contentorCheckNeg-aluguel" >
+                                                        <input type="checkbox" value="venda" class="checkStatus" name="status" id="checkboxIdAluguel" >
+                                                        <label for="checkboxIdAluguel" class="labelCheck" >Para Aluguel</label>
+                                                    </div>
+
+                                                    <div class="contentorCheckNeg contentorCheckNeg-aluguel" >
+                                                        <input type="checkbox" value="publicar" class="checkPub" name="publicar" id="checkPublicar" >                                                        
+                                                        <label for="checkPublicar" id="idLabelPub" class="labelCheck pub">Publicar no site</label>
+                                                    </div>
+                                                </div>
+
+
+                                                <!--Inputs da form-->
+                                                <div class="continuaInputsIm mesmoWidthIm" >
+                                                    <div class="linhaIm1" >
+                                                        <div class="ctInputIm  styleGoogle medioInputLinhaIm1">                                                                                                            
+                                                            <select name="tipoImovel" class="selectCondicaoIm input1" id="idCondicaoIm" >
+                                                                <option value="1" >Usado</option>
+                                                                <option value="2" >Novo</option>
+                                                                <option value="3" >Na planta</option>
+                                                                <option value="4" >Inacabado</option>
+                                                            </select>                                                       
+                                                        </div>
+                                                        <div class="ctInputIm styleGoogle  medioInputLinhaIm1 input2">                                                    
+                                                            <input type="number" autocomplete="off" placeholder=" " class="inputGoogle" name="area" id="areaIm" />
+                                                            <label for="areaIm" class="labelStyleGoogle">Dimensão do Imóvel</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="linhaIm2" >
+                                                        <div class="divDescIm">                                                    
+                                                            <textarea placeholder="Descrição" class="textDesc" name="descricao" id="decIm"></textarea>                                                            
+                                                        </div>
+                                                    </div>                                                                                                     
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="ctDivForm ctDivForm-geralInputs ">
+                                                <div class="dadosNegocio" >
+                                                    <h3><span id="nomeNegocio" >Dados da Venda</span></h3>
+                                                    <div class="divDadosNego divDadosNego-dadosVenda" >
+                                                        <div class="contentorVenda" >
+                                                            <div class="linhaVenda1" >
+                                                                <div class="componeteVenda1 ctInputIm  styleGoogle selectPropriedade">                                                                                                            
+                                                                    <select name="clienteVenda" class="selectCondicaoIm input1" id="idCliente" >
+                                                                        <option value="1" >Usado</option>
+                                                                        <option value="2" >Novo</option>
+                                                                        <option value="3" >Na planta</option>
+                                                                        <option value="4" >Inacabado</option>
+                                                                    </select>                                                       
+                                                                </div>
+                                                                <div class="componeteVenda2" >
+                                                                    <div class="contentorValor contentorValor-venda" >
+                                                                        <input type="checkbox" value="apresentaValor" class="checkPub"  id="checkValorApresentar" >                                                        
+                                                                        <label for="checkValorApresentar" class="labelCheck pub">No valor de: </label>
+                                                                    </div>
+                                                                    <div class="ctInputIm styleGoogle tamanhoInputValor input2">                                                    
+                                                                        <input type="number" autocomplete="off" placeholder=" " class="inputGoogle" name="valorVenda" id="valorIm" />
+                                                                        <label for="valorIm" class="labelStyleGoogle">Valor</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="linhaVenda2" >
+                                                                <div class="ctInputIm styleGoogle tamanhoInputComissao input2">                                                    
+                                                                    <input type="number" autocomplete="off" placeholder=" " class="inputGoogle" name="valorIm" id="comissaoImob" />
+                                                                    <label for="comissaoImob" class="labelStyleGoogle">Comissão da imobiliária</label>
+                                                                </div>
+                                                                <span class="resultadoComissao" >AOA 0,00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="divDadosNego divDadosNego-dadosAluguel" >
+                                                        <div class="contentorVenda" >
+                                                            <div class="linhaVenda1" >
+                                                                <div class="componeteVenda1 ctInputIm  styleGoogle selectPropriedade">                                                                                                            
+                                                                    <select name="clienteAluguel" class="selectCondicaoIm input1" name="idFkCliente" id="idCliente" >
+                                                                        <option value="1" >Usado</option>
+                                                                        <option value="2" >Novo</option>
+                                                                        <option value="3" >Na planta</option>
+                                                                        <option value="4" >Inacabado</option>
+                                                                    </select>                                                       
+                                                                </div>
+                                                                <div class="componeteVenda2" >
+                                                                    <div class="contentorValor contentorValor-venda" >
+                                                                        <input type="checkbox" value="apresentaValor" class="checkPub"  id="checkValorApresentar" >                                                        
+                                                                        <label for="checkValorApresentar" class="labelCheck pub">No valor de: </label>
+                                                                    </div>
+                                                                    <div class="ctInputIm styleGoogle tamanhoInputValor input2">                                                    
+                                                                        <input type="number" autocomplete="off" placeholder=" " class="inputGoogle" name="valorAluguel" id="valorMensalidade" />
+                                                                        <label for="valorMensalidade" class="labelStyleGoogle">Valor da Mensalidade</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="linhaVenda2" >
+                                                                <div class="ctInputIm styleGoogle tamanhoInputComissao input2">                                                    
+                                                                    <input type="number" autocomplete="off" placeholder=" " class="inputGoogle" name="comissaoImobiliaria" id="comissaoImob" />
+                                                                    <label for="comissaoImob" class="labelStyleGoogle">Comissão da imobiliária</label>
+                                                                </div>
+                                                                <span class="resultadoComissao" >AOA 0,00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="caixaFormIm caixaFormIm-divLinkEnderecoIm" >
+                                            <div class="contentorInputEndereco" >
+                                                <div class="ctInputIm styleGoogle todoInputsEndereco">                                                    
+                                                    <input type="text" autocomplete="off" placeholder=" " class="inputGoogle" name="Cidade" id="cidadeIm" />
+                                                    <label for="Cidade" class="labelStyleGoogle">Cidade</label>
+                                                </div>
+                                                <div class="ctInputIm styleGoogle todoInputsEndereco">                                                    
+                                                    <input type="text" autocomplete="off" placeholder=" " class="inputGoogle" name="municipio" id="municipioIm" />
+                                                    <label for="municipioIm" class="labelStyleGoogle">Municiípio</label>
+                                                </div>
+                                                <div class="ctInputIm styleGoogle todoInputsEndereco">                                                    
+                                                    <input type="text" autocomplete="off" placeholder=" " class="inputGoogle" name="bairro" id="bairroIm" />
+                                                    <label for="bairroIm" class="labelStyleGoogle">Bairro</label>
+                                                </div>
+                                                <div class="ctInputIm styleGoogle todoInputsEndereco">                                                    
+                                                    <input type="text" autocomplete="off" placeholder=" " class="inputGoogle" name="rua" id="ruaIm" />
+                                                    <label for="ruaIm" class="labelStyleGoogle">Rua</label>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="caixaFormIm caixaFormIm-divLinkCaractIm" >
+                                            <div class="contentorInputCaracteristica" >
+                                                <div class="ctInputIm styleGoogle todoInputsEndereco">                                                    
+                                                    <input type="number" autocomplete="off" placeholder=" " class="inputGoogle" name="qtdSala" id="qtdSalaIm" />
+                                                    <label for="qtdSalaIm" class="labelStyleGoogle">Nº de Sala</label>
+                                                </div>
+                                                <div class="ctInputIm styleGoogle todoInputsEndereco">                                                    
+                                                    <input type="number" autocomplete="off" placeholder=" " class="inputGoogle" name="qtdGinasio" id="qtdGinasioIm" />
+                                                    <label for="qtdGinasioIm" class="labelStyleGoogle">Nº de Ginásio</label>
+                                                </div>
+                                                <div class="ctInputIm styleGoogle todoInputsEndereco">                                                    
+                                                    <input type="text" autocomplete="off" placeholder=" " class="inputGoogle" name="qtdSpar" id="qtdSparIm" />
+                                                    <label for="qtdSparIm" class="labelStyleGoogle">Nº de Spar</label>
+                                                </div>
+                                                <div class="ctInputIm styleGoogle todoInputsEndereco">                                                    
+                                                    <input type="text" autocomplete="off" placeholder=" " class="inputGoogle" name="qtdWC" id="qtdWCIm" />
+                                                    <label for="qtdWCIm" class="labelStyleGoogle">Nº de WC</label>
+                                                </div>
+                                                <div class="ctInputIm styleGoogle todoInputsEndereco">                                                    
+                                                    <input type="text" autocomplete="off" placeholder=" " class="inputGoogle" name="qtdQuarto" id="qtdQuartoIm" />
+                                                    <label for="qtdQuartoIm" class="labelStyleGoogle">Nº de quarto</label>
+                                                </div>
+                                                <div class="ctInputIm styleGoogle todoInputsEndereco">                                                    
+                                                    <input type="text" autocomplete="off" placeholder=" " class="inputGoogle" name="qtdPsicinas" id="qtdPsicinasIm" />
+                                                    <label for="qtdPsicinasIm" class="labelStyleGoogle">Nº de psicina</label>
+                                                </div>
+                                                <div class="ctInputIm styleGoogle todoInputsEndereco">                                                    
+                                                    <input type="text" autocomplete="off" placeholder=" " class="inputGoogle" name="qtdSuite" id="qtdSuiteIm" />
+                                                    <label for="qtdSuiteIm" class="labelStyleGoogle">Nº de suite</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="caixaFormIm caixaFormIm-divLinkMaisFotoIm" >
+                                           Mais Fotos
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!--Aqui Tem os botões de ação na inserção-->
+                                <div class="caixaModalDash caixaModalDash-btnAcoes" >
+                                    <!--Área só mesmo para ações como: Cancelar, Alterar e Salvar-->
+                                    <div class="contentorBtnModalIm" >
+                                        <button class="btnModalIm btnModalIm-cancelar" >Cancelar</button>
+                                        <button class="btnModalIm btnModalIm-alterar" >Alterar</button>
+                                        <button class="btnModalIm btnModalIm-salvar" >Salvar</button>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Listagem e Novo Imóvel --> 
+    
+    
+
+    <!-- Início -->
+    <div class="containerGeralDash inicioDash " >
+
+        <!-- Início da Cabeçalho do Dashboard-->
+    	<header id="headerDash" >
+            <div class="contentorHeaderDash" >
+                <div class="cabecalhoDoMenuDash menuLateralDash " >
+
+                    <!--Logo-->            
+                    <div class="contentorLogoDash">                        
+                        <div class="contentorImgLogoDash" >
+                            <img src="img/logo.png" class="imgLogoDash" >
+                        </div>
+                        <div class="empresaDash" >
+                            <span class="textoInteiro" >paraclet<span class="parteTexto" >ors</span></span>
+                        </div>
+                    </div>
+
+                    <!--Menu Nav-->
+                    <div class="contentorListaDash" >
+                        <nav class="navMenuDash" >
+                            <ul class="listaDash" >
+                                <li class="margemDash funcionalidade" >
+                                    <a class="linkMenuLateralDash primeiroTeste puxaPInicial" >
+                                    <div class="soNomeLinkDash" >
+                                        <i class="fa fa-home iconeNoInicioDash" ></i>
+                                        <span class="textoLinkDash" >Início</span>
+                                    </div>                                    
+                                    <i class="fa fa-angle-right iconeNoFimDash" > </i>
+                                </a></li> 
+                                <li class="margemDash " >
+                                    <a class="linkMenuLateralDash" id="idPessoa" >
+                                     <div class="soNomeLinkDash" >
+                                        <i class="fa fa-group iconeNoInicioDash" ></i>
+                                        <span class="textoLinkDash">Pessoas</span>                                        
+                                    </div>                                    
+                                    <i class="fa fa-angle-right iconeNoFimDash" > </i>                                    
+                                  </a>
+                                    <ul class="subMenuPessoasDash subMenuDash displayListaDash" id="idSubMenuPessoa" >
+                                        
+                                        <li class="itemSubMenuDash "><a class="subLinkDash puxaPFuncionarios"><i class="fa fa-user" ></i> Funcionário</a></li>
+                                        <li class="itemSubMenuDash "><a class="subLinkDash puxaPUtilizador"><i class="fa fa-user" ></i> Utilizadores</a></li>                                        
+                                    </ul>
+                                </li>   
+                                 <li class="margemDash " >
+                                    <a class="linkMenuLateralDash" id="idCategoria" >
+                                     <div class="soNomeLinkDash" >
+                                        <i class="ni ni-bullet-list-67 iconeNoInicioDash" ></i>
+                                        <span class="textoLinkDash">Categorias</span>                                        
+                                    </div>                                    
+                                    <i class="fa fa-angle-right iconeNoFimDash" > </i>                                    
+                                  </a>
+                                    <ul class="subMenuPessoasDash subMenuDash displayListaDash" id="idSubMenuCategoria" >
+                                        
+                                        <li class="itemSubMenuDash " ><a class="subLinkDash puxaPTiposFun" ><i class="ni ni-chart-pie-35 " > </i> Tipos de Funcionário</a></li>
+                                        <li class="itemSubMenuDash "><a class="subLinkDash puxaPFuncionarios"><i class="ni ni-chart-pie-35 " ></i> Tipos de Imóveis</a></li>
+                                                                            
+                                    </ul>
+                                </li>       
+                                <li class="margemDash" >
+                                    <a class="linkMenuLateralDash" id="idOpImoveis" >
+                                     <div class="soNomeLinkDash" >
+                                        <i class="ni ni-building iconeNoInicioDash" ></i>
+                                        <span class="textoLinkDash">Opções de Imóveis</span>                                        
+                                    </div>                                    
+                                    <i class="fa fa-angle-right iconeNoFimDash" > </i>                                    
+                                  </a>
+                                    <ul class="subMenuOpImoveisDash subMenuDash displayListaDash" id="subMenuOpImoveisDash" >
+                                                                            
+                                        <li class="itemSubMenuDash funcionalidade"><a class="subLinkDash puxaPImoveisT"><i class="fa fa-list-ul" ></i> Listar Imóveis</a></li>                                        
+                                    </ul>
+                                </li>
+                                <li class="margemDash funcionalidade" ><a class="linkMenuLateralDash puxaPAgendaCorretor" >
+                                    <div class="soNomeLinkDash" >
+                                        <i class="ni ni-chart-bar-32 iconeNoInicioDash" ></i>
+                                        <span class="textoLinkDash" >Agenda Corretores</span>
+                                    </div>                                    
+                                    <i class="fa fa-angle-right iconeNoFimDash" > </i>
+                                </a></li>
+                                <li class="margemDash funcionalidade" ><a class="linkMenuLateralDash puxaPImoveisV" >
+                                     <div class="soNomeLinkDash" >
+                                        <i class="ni ni-tag iconeNoInicioDash" ></i>
+                                        <span class="textoLinkDash" >Imóveis Vendidos</span>
+                                    </div>                                    
+                                    <i class="fa fa-angle-right iconeNoFimDash" > </i>
+                                </a></li>
+                                <li class="margemDash funcionalidade"><a class="linkMenuLateralDash puxaPImoveisA" >
+                                    <div class="soNomeLinkDash" >
+                                        <i class="ni ni-tag iconeNoInicioDash" ></i>
+                                        <span class="textoLinkDash" >Imóveis Alugados</span>
+                                    </div>                                    
+                                    <i class="fa fa-angle-right iconeNoFimDash" > </i>
+                                </a></li>
+                            </ul>
+                        </nav>                
+                    </div>              
+                </div>
+                <div class="rodapeDoMenuDash menuLateralDash" >
+                   <ul>
+                        <li><a class="linkMenuLateralDash" ><i class="fa fa-folder" ></i></a></li>
+                   </ul>
+                </div>
+            </div>    		
+    	</header>
+
+        <!--Início do corpo Dashboard-->
+    	<main id="mainDash" >
+
+            <!--Início do cabeçalho do corpo Central-->
+    		<div class="cabecalhoDash">
+                <div class="contentorCabecalhoDash" >
+
+
+                    <!--Estamos no header do corpo central-->
+                    
+                    <!--Elemento 1-->     
+                    <div class="divHeaderCorpo divHeaderCorpo1 " >
+                        <h2 class="tituloUserDash" name="tituloUser" >Painel Administrativo</h2>
+                        <form method="" action="" class="formularioBuscador" >
+                            <input typ="text" name="buscaDash" class="inputBuscador componenteBusca inputDashMargen outraCor" placeholder="Pesquis aqui um ítem" >
+                            <button class="fa fa-search  componenteBusca btBusca corTextoDash" ></button>
+                        </form>
+                    </div>
+
+                    <!--Elemento 2--> 
+                     <div class="divHeaderCorpo divHeaderCorpo2" >
+                         <div class="contentorPerfilUserDash" >
+                             <div class="divInforUserDash" >
+                                 <div class="divImgUserDash" >
+                                     <img src="img/corretorAlt.jpg" />
+                                 </div>
+                                 <div class="nomeUserDash" >
+                                     Tirion Lenister
+                                 </div>
+                             </div>
+                             <div class="OpUser" >
+                                 <a class="linkOpUserDash corAzulDash" ><i class="ni ni-bell-55" ></i>
+                                    <span class="numeroNotificar" >8</span>
+                                 </a>
+                                 <a class="linkOpUserDash corAzulDash " ><i class="ni ni-settings-gear-65" ></i></a>
+                                 <a class="linkOpUserDash corVermelhoDash" ><i class="ni ni-button-power" ></i></a>
+                             </div>
+                         </div>
+                    </div>                     
+                </div>
+            </div>
+
+            <!-- Início do corpo da área do corpo central Inicio-->
+            
+            <div class="painelIncial painelUser  desligaPainel " id="idPainelInicial">
+
+                <!--Início do corpo dos cards-->
+                <div class="contentorCardsDash primeiroContentorCorpoDash "  >
+                    <div class="limiteCardsDash"  >
+
+                        <!--Início dos Cards-->
+
+                        <!--Card 1-->
+                        <div class="cardDash" >
+                            <div class="contentorIconeCardDash divElementoCardDash" >
+                                 <i class="fa fa-group iconeCardDash" ></i>
+                            </div>
+                            <div class="contentorInforCardsDash divElementoCardDash" >
+                                <div class="textCardDash" >
+                                    <div class="numeroIndicados" >
+                                        <span class="numeroObtidoDash numeroDeClientes" >125</span>
+                                    </div>
+                                    <div class="contentorPercentagem"  >
+                                        <span class="numeroObtidoDash numeroEmPercentagemDash" >+1.858%</span>
+                                    </div>                                    
+                                </div>
+                                <div class="tituloCardDash" >
+                                    <span class="tituloCardDash">Clientes Interessados</span>
+                                </div>                            
+                            </div>
+                        </div>
+
+
+                        <!--Card 2-->
+                        <div class="cardDash margemCards" >
+                            <div class="contentorIconeCardDash divElementoCardDash" >
+                                 <i class="ni ni-money-coins iconeCardDash" ></i>
+                            </div>
+                            <div class="contentorInforCardsDash divElementoCardDash" >
+                                <div class="textCardDash" >
+                                    <div class="numeroIndicados" >
+                                        <span class="numeroObtidoDash numeroDeClientes" >125</span>
+                                    </div>
+                                    <div class="contentorPercentagem"  >
+                                        <span class="numeroObtidoDash numeroEmPercentagemDash" >+1.858%</span>
+                                    </div>                                    
+                                </div>
+                                <div class="tituloCardDash" >
+                                    <span class="tituloCardDash">Saldo</span>
+                                </div>                            
+                            </div>
+                        </div>
+
+
+                        <!--Card 3-->
+                        <div class="cardDash margemCards" >
+                            <div class="contentorIconeCardDash divElementoCardDash" >
+                                 <i class="ni ni-tag iconeCardDash" ></i>
+                            </div>
+                            <div class="contentorInforCardsDash divElementoCardDash" >
+                                <div class="textCardDash" >
+                                    <div class="numeroIndicados" >
+                                        <span class="numeroObtidoDash numeroDeClientes" >125</span>
+                                    </div>
+                                    <div class="contentorPercentagem"  >
+                                        <span class="numeroObtidoDash numeroEmPercentagemDash" >+1.858%</span>
+                                    </div>                                    
+                                </div>
+                                <div class="tituloCardDash" >
+                                    <span class="tituloCardDash">Imóveis Vendidos</span>
+                                </div>                            
+                            </div>
+                        </div>
+
+
+                        <!--Card 4-->
+                        <div class="cardDash margemCards" >
+                            <div class="contentorIconeCardDash divElementoCardDash" >
+                                 <i class="ni ni-tag iconeCardDash" ></i>
+                            </div>
+                            <div class="contentorInforCardsDash divElementoCardDash" >
+                                <div class="textCardDash" >
+                                    <div class="numeroIndicados" >
+                                        <span class="numeroObtidoDash numeroDeClientes" >125</span>
+                                    </div>
+                                    <div class="contentorPercentagem"  >
+                                        <span class="numeroObtidoDash numeroEmPercentagemDash" >+1.858%</span>
+                                    </div>                                    
+                                </div>
+                                <div class="tituloCardDash" >
+                                    <span class="tituloCardDash" name="nomeCardAlugado" >Imóveis Alugados</span>
+                                </div>                            
+                            </div>
+                        </div>
+
+
+                        <!--Fim dos Cards-->                        
+                    </div>
+                </div> 
+
+                <!--Início da área das informações resumidads-->
+                <div class="contentorInforResumidasDash " >
+
+                    <div class="contentorMain" >
+                        
+                        <div class="contentorInforCorpo">
+
+                            <!--Tabela dos Corretores Em destaques-->
+                            <div class="contentorTabelaCorretorDash">
+                                <div class="divTabela" >
+                                    <h2 class="tituloDivTabela" >Corretores em destaques</h2>
+                                    <table class="tabelaDestaquesDash" >
+                                        <thead>
+                                            <tr>
+                                                <th class="tituloTabelaDash areaTabelaDash" >Nome</th>
+                                                <th class="tituloTabelaDash areaTabelaDash" >Foto</th>
+                                                <th class="tituloTabelaDash areaTabelaDash" >Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="conteudoTabelaDash areaTabelaDash" >Celson António</td>
+                                                <td class="conteudoTabelaDash areaTabelaDash" ><div class="imgCorretorPrefer" ><img src="img/corretorC.jpg" /></div></td>
+                                               <td class="conteudoTabelaDash areaTabelaDash" ><div class="corretorStatus" ><span class="textoCarregadorDash  corTextoCarregadorDash1" >15 imóvel vendidos</span> <span class="carregadorDash1 carregadorDash corCarregadorDash1" ></span></div></td>                                    
+                                            </tr>
+                                            <tr>
+                                                <td class="conteudoTabelaDash areaTabelaDash" >Laurentina Henriques</td>
+                                                <td class="conteudoTabelaDash areaTabelaDash" ><div class="imgCorretorPrefer" ><img src="img/corretorLAAA.jpg" /></div></td>
+                                               <td class="conteudoTabelaDash areaTabelaDash" ><div class="corretorStatus" ><span class="textoCarregadorDash  corTextoCarregadorDash2" >10 imóvel vendidos</span> <span class="carregadorDash2 carregadorDash corCarregadorDash2" ></span></div></td>                                      
+                                            </tr>
+                                            <tr>
+                                                <td class="conteudoTabelaDash areaTabelaDash" >Lenilson Pascoal</td>
+                                                <td class="conteudoTabelaDash areaTabelaDash" ><div class="imgCorretorPrefer" ><img src="img/corretor1.jpg" /></div></td>
+                                               <td class="conteudoTabelaDash areaTabelaDash" ><div class="corretorStatus" ><span class="textoCarregadorDash  corTextoCarregadorDash3" >8 imóvel vendidos</span> <span class="carregadorDash3 carregadorDash corCarregadorDash3" ></span></div></td>                                     
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td class="conteudoTabelaDash areaTabelaDash" >Tirion Lenister</td>
+                                                <td class="conteudoTabelaDash areaTabelaDash" ><div class="imgCorretorPrefer" ><img src="img/corretorAlt.jpg" /></div></td>
+                                               <td class="conteudoTabelaDash areaTabelaDash" ><div class="corretorStatus" ><span class="textoCarregadorDash  corTextoCarregadorDash4" >4 imóvel vendidos</span> <span class="carregadorDash4 carregadorDash corCarregadorDash4" ></span></div></td>                                        
+                                            </tr>
+                                           
+                                          
+                                        </tbody>
+                                        
+                                    </table>
+                                </div>
+                            <!--Propriedades dos imóveis-->
+                            <div class="contentorAddPropriedadesDash "  >
+                                <div class="divAddPropriedade" >
+                                    <div class="cabecalhoPropriedade" >
+                                        <h2 class="tituloAddPropriedade" >Propriedades</h2>
+                                        <button class="btAddPropriedade" > <i class="fa fa-plus" ></i> Nova propriedade</button>
+                                    </div>
+                                    <div class="corpoAddPropriedade" >
+                                         <ul class="listaProprieadades" >
+                                             <li><a class="linkAddPropriedade" >Apartamento <i class="" ></i></a></li>
+                                             <li><a class="linkAddPropriedade" >Casa<i class="" ></i></a></li>
+                                             <li><a class="linkAddPropriedade" >Condomínio <i class="" ></i></a></li>
+                                             <li><a class="linkAddPropriedade" >Terrenos <i class="" ></i></a></li>
+                                             <li><a class="linkAddPropriedade" >Apartamento <i class="" ></i></a></li>
+                                         </ul>
+                                    </div>
+                                </div>
+                             </div>
+                            </div>
+                        </div>
+
+                        <!--Imóveis Recentemente Vendidos-->
+                        <div class="imoveisVendidos" >                        
+                            <div class="contentorImoveisVendidos" >
+
+                                <!--Casa vendida 1-->
+                                <div class="imovelVendido imovelVendido1" >
+                                    <div class="areaCasaDash1 areaCasaDash" >
+                                        <img src="img/imovel_2.jpg" />
+                                        <span class="cituacao" >Vendido</span>
+                                    </div>
+                                    <div class="areaCasaDash2 areaCasaDash" >
+                                        <ul class="listImovelVendidoDash" > 
+                                            <li class="elementoListVendidoDash titleImovelVendido" >Casa de 4 quartos</li>
+                                            <li class="elementoListVendidoDash" >
+                                                <ul class="subListaCarat" >
+                                                    <li class="elementoSubListaCarat" >4 Quartos</li>
+                                                    <li class="elementoSubListaCarat" >3 Banheiro</li>
+                                                    <li class="elementoSubListaCarat" >1 Garagem</li>
+                                                </ul>
+                                            </li>
+                                            <li class="elementoListVendidoDash localiza" >Local deste imóvel</li>
+                                            <li class="elementoListVendidoDash identificador " >Código: <span name="codigoImovel">25</span></li>
+                                            <li class="elementoListVendidoDash valorImovel" >19.000.000AOA</li>
+                                        </ul>
+                                    </div>
+                                    <div class="areaCasaDash3 areaCasaDash " >
+                                        <div class="conteudoArea3Dash" >
+                                            <span class="textoDeHeaderDash textoDoCorretor marginElement" >Corretor:</span>
+                                            <div class="imgCorretorResp"><img  src="img/CorretorLAAA.jpg" /></div>
+                                            <span class="nomeCorretorResp textoDoCorretor nomeBroker marginElement" >Laurentina Henriques</span>
+                                            <div class="contentorDataVendido" >
+                                                <span class="textoDataDash textoDoCorretor" >Data: <span name="dataVendido" >24/01/2022</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Casa vendida 2-->
+                                <div class="imovelVendido imovelVendido2" >
+                                    <div class="areaCasaDash1 areaCasaDash" >
+                                        <img src="img/imovel_4.jpeg" />
+                                        <span class="cituacao" >Vendido</span>
+                                    </div>
+                                    <div class="areaCasaDash2 areaCasaDash" >
+                                        <ul class="listImovelVendidoDash" > 
+                                            <li class="elementoListVendidoDash titleImovelVendido" >Casa de 4 quartos</li>
+                                            <li class="elementoListVendidoDash" >
+                                                <ul class="subListaCarat" >
+                                                    <li class="elementoSubListaCarat" >4 Quartos</li>
+                                                    <li class="elementoSubListaCarat" >3 Banheiro</li>
+                                                    <li class="elementoSubListaCarat" >1 Garagem</li>
+                                                </ul>
+                                            </li>
+                                            <li class="elementoListVendidoDash localiza" >Local deste imóvel</li>
+                                            <li class="elementoListVendidoDash identificador " >Código: <span name="codigoImovel">25</span></li>
+                                            <li class="elementoListVendidoDash valorImovel" >19.000.000AOA</li>
+                                        </ul>
+                                    </div>
+                                    <div class="areaCasaDash3 areaCasaDash " >
+                                        <div class="conteudoArea3Dash" >
+                                            <span class="textoDeHeaderDash textoDoCorretor marginElement" >Corretor:</span>
+                                            <div class="imgCorretorResp"><img  src="img/CorretorC.jpg" /></div>
+                                            <span class="nomeCorretorResp textoDoCorretor nomeBroker marginElement" >Laurentina Henriques</span>
+                                            <div class="contentorDataVendido" >
+                                                <span class="textoDataDash textoDoCorretor" >Data: <span name="dataVendido" >24/01/2022</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Casa vendida 3-->
+                                <div class="imovelVendido imovelVendido3" >
+                                    <div class="areaCasaDash1 areaCasaDash" >
+                                        <img src="img/imovel_3.jpeg" />
+                                        <span class="cituacao" >Vendido</span>
+                                    </div>
+                                    <div class="areaCasaDash2 areaCasaDash" >
+                                        <ul class="listImovelVendidoDash" > 
+                                            <li class="elementoListVendidoDash titleImovelVendido" >Casa de 4 quartos</li>
+                                            <li class="elementoListVendidoDash" >
+                                                <ul class="subListaCarat" >
+                                                    <li class="elementoSubListaCarat" >4 Quartos</li>
+                                                    <li class="elementoSubListaCarat" >3 Banheiro</li>
+                                                    <li class="elementoSubListaCarat" >1 Garagem</li>
+                                                </ul>
+                                            </li>
+                                            <li class="elementoListVendidoDash localiza" >Local deste imóvel</li>
+                                            <li class="elementoListVendidoDash identificador " >Código: <span name="codigoImovel">25</span></li>
+                                            <li class="elementoListVendidoDash valorImovel" >19.000.000AOA</li>
+                                        </ul>
+                                    </div>
+                                    <div class="areaCasaDash3 areaCasaDash " >
+                                        <div class="conteudoArea3Dash" >
+                                            <span class="textoDeHeaderDash textoDoCorretor marginElement" >Corretor:</span>
+                                            <div class="imgCorretorResp"><img  src="img/CorretorC.jpg" /></div>
+                                            <span class="nomeCorretorResp textoDoCorretor nomeBroker marginElement" >Laurentina Henriques</span>
+                                            <div class="contentorDataVendido" >
+                                                <span class="textoDataDash textoDoCorretor" >Data: <span name="dataVendido" >24/01/2022</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Casa vendida 4-->
+                                <div class="imovelVendido imovelVendido4" >
+                                    <div class="areaCasaDash1 areaCasaDash" >
+                                        <img src="img/image_6.jpg" />
+                                        <span class="cituacao" >Vendido</span>
+                                    </div>
+                                    <div class="areaCasaDash2 areaCasaDash" >
+                                        <ul class="listImovelVendidoDash" > 
+                                            <li class="elementoListVendidoDash titleImovelVendido" >Casa de 4 quartos</li>
+                                            <li class="elementoListVendidoDash" >
+                                                <ul class="subListaCarat" >
+                                                    <li class="elementoSubListaCarat" >4 Quartos</li>
+                                                    <li class="elementoSubListaCarat" >3 Banheiro</li>
+                                                    <li class="elementoSubListaCarat" >1 Garagem</li>
+                                                </ul>
+                                            </li>
+                                            <li class="elementoListVendidoDash localiza" >Local deste imóvel</li>
+                                            <li class="elementoListVendidoDash identificador " >Código: <span name="codigoImovel">25</span></li>
+                                            <li class="elementoListVendidoDash valorImovel" >19.000.000AOA</li>
+                                        </ul>
+                                    </div>
+                                    <div class="areaCasaDash3 areaCasaDash " >
+                                        <div class="conteudoArea3Dash" >
+                                            <span class="textoDeHeaderDash textoDoCorretor marginElement" >Corretor:</span>
+                                            <div class="imgCorretorResp"><img  src="img/CorretorLAAA.jpg" /></div>
+                                            <span class="nomeCorretorResp textoDoCorretor nomeBroker marginElement" >Laurentina Henriques</span>
+                                            <div class="contentorDataVendido" >
+                                                <span class="textoDataDash textoDoCorretor" >Data: <span name="dataVendido" >24/01/2022</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            
+            <!-- Contentor Listagem de Tipos de Funcionários -->
+            <div class="painelSecundario  painelUser  desligaPainel" id="idPainelTipoFun" >
+
+                <!--Painel de imóvel contido no sistema-->
+                <div class="limiteDash bordaPainel contentorListaImovel" >
+                    <!-- Header do Painel -->
+                    <div class="headerPainelImovel" >
+                        <div class="tituloHeaderDash" >
+                            <h2 class="tituloListaImoveis" >Lista de Tipos de Funcionários </h2>
+                            <div class="abaPesquisaDash" style="display:none;">
+                                <a>Pesquisar Imóvel</a>
+                            </div>
+                            <button id="btChamaModal" class="btNewImovelDash" ><i class="fa fa-plus" ></i> Novo Imóvel</button>   
+                        </div>
+                                                               
+                    </div>
+
+
+                    <!-- Main do Painel -->
+                    <div class="mainPainelImovelDash" >
+                        <div class="divTabelaDash" >
+                            <table class="tabelaImovelTodos" >
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Vendedor</th>
+                                        <th>Valor</th>
+                                        <th>Bairro</th>
+                                        <th>Status</th>
+                                        <th>Foto</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >Casa de 1 quarto</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink" id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" id="meAlteraImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>                             
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="divPaginacaoDash" >
+                            <div class="contentorPaginacaoDash" >
+                                <ul class="listaPaginacaoDash" >
+                                    <li class="elementoEstPaginacao inicialPagina" ><a class="
+                                        linkPaginacao " ></a><i class="fa fa-angle-left" ></i></li>
+
+                                    <li class="elementoEstPaginacao hoverPagina corFinal" ><a class="
+                                        linkPaginacao " >1</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >2</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >3</a></li>
+
+                                    <li class=" elementoEstPaginacao corNumeroPagina" ><a class="
+                                        linkPaginacao elementoFinal" ><i class="fa fa-angle-right" ></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- Contentor Listagem de Funcionários -->
+            <div class="painelSecundario painelUser desligaPainel" id="idPainelFuncionario" >
+
+                <!--Painel de imóvel contido no sistema-->
+                <div class="limiteDash bordaPainel contentorListaImovel" >
+                    <!-- Header do Painel -->
+                    <div class="headerPainelImovel" >
+                        <div class="tituloHeaderDash" >
+                            <h2 class="tituloListaImoveis" >Lista de Funcionários </h2>
+                            <div class="abaPesquisaDash" style="display:none;">
+                                <a>Pesquisar Imóvel</a>
+                            </div>
+                            <button id="btChamaModal" class="btNewImovelDash" ><i class="fa fa-plus" ></i> Novo Imóvel</button>   
+                        </div>
+                                                               
+                    </div>
+
+
+                    <!-- Main do Painel -->
+                    <div class="mainPainelImovelDash" >
+                        <div class="divTabelaDash" >
+                            <table class="tabelaImovelTodos" >
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Vendedor</th>
+                                        <th>Valor</th>
+                                        <th>Bairro</th>
+                                        <th>Status</th>
+                                        <th>Foto</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >Casa de 1 quarto</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink" id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" id="meAlteraImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>                             
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="divPaginacaoDash" >
+                            <div class="contentorPaginacaoDash" >
+                                <ul class="listaPaginacaoDash" >
+                                    <li class="elementoEstPaginacao inicialPagina" ><a class="
+                                        linkPaginacao " ></a><i class="fa fa-angle-left" ></i></li>
+
+                                    <li class="elementoEstPaginacao hoverPagina corFinal" ><a class="
+                                        linkPaginacao " >1</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >2</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >3</a></li>
+
+                                    <li class=" elementoEstPaginacao corNumeroPagina" ><a class="
+                                        linkPaginacao elementoFinal" ><i class="fa fa-angle-right" ></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- Contentor Listagem de Utilizador -->
+
+            <div class="painelSecundario  painelUser desligaPainel" id="idPainelUtilizador" >
+
+                <!--Painel de imóvel contido no sistema-->
+                <div class="limiteDash bordaPainel contentorListaImovel" >
+                    <!-- Header do Painel -->
+                    <div class="headerPainelImovel" >
+                        <div class="tituloHeaderDash" >
+                            <h2 class="tituloListaImoveis" >Lista de Utilizador </h2>
+                            <div class="abaPesquisaDash" style="display:none;">
+                                <a>Pesquisar Imóvel</a>
+                            </div>
+                            <button id="btChamaModal" class="btNewImovelDash" ><i class="fa fa-plus" ></i> Novo Imóvel</button>   
+                        </div>
+                                                               
+                    </div>
+
+
+                    <!-- Main do Painel -->
+                    <div class="mainPainelImovelDash" >
+                        <div class="divTabelaDash" >
+                            <table class="tabelaImovelTodos" >
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Vendedor</th>
+                                        <th>Valor</th>
+                                        <th>Bairro</th>
+                                        <th>Status</th>
+                                        <th>Foto</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >Casa de 1 quarto</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink" id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" id="meAlteraImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>                             
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="divPaginacaoDash" >
+                            <div class="contentorPaginacaoDash" >
+                                <ul class="listaPaginacaoDash" >
+                                    <li class="elementoEstPaginacao inicialPagina" ><a class="
+                                        linkPaginacao " ></a><i class="fa fa-angle-left" ></i></li>
+
+                                    <li class="elementoEstPaginacao hoverPagina corFinal" ><a class="
+                                        linkPaginacao " >1</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >2</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >3</a></li>
+
+                                    <li class=" elementoEstPaginacao corNumeroPagina" ><a class="
+                                        linkPaginacao elementoFinal" ><i class="fa fa-angle-right" ></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            
+
+
+            <!-- Contentor Listagem de Imoveis Vendidos -->
+            <div class="painelSecundario  painelUser desligaPainel" id="idPainelTodosImoveis" >
+
+                <!--Painel de imóvel contido no sistema-->
+                <div class="limiteDash bordaPainel contentorListaImovel" >
+                    <!-- Header do Painel -->
+                    <div class="headerPainelImovel" >
+                        <div class="tituloHeaderDash" >
+                            <h2 class="tituloListaImoveis" >Lista de Imóveis </h2>
+                            <div class="abaPesquisaDash" style="display:none;">
+                                <a>Pesquisar Imóvel</a>
+                            </div>
+                            <button id="btChamaModalTodos" class="btNewImovelDash" ><i class="fa fa-plus" ></i> Novo Imóvel</button>   
+                        </div>
+                                                               
+                    </div>
+
+
+                    <!-- Main do Painel -->
+                    <div class="mainPainelImovelDash" >
+                        <div class="divTabelaDash" >
+                            <table class="tabelaImovelTodos" >
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Vendedor</th>
+                                        <th>Valor</th>
+                                        <th>Bairro</th>
+                                        <th>Status</th>
+                                        <th>Foto</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >Casa de 1 quarto</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink" id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" id="meAlteraImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>                             
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="divPaginacaoDash" >
+                            <div class="contentorPaginacaoDash" >
+                                <ul class="listaPaginacaoDash" >
+                                    <li class="elementoEstPaginacao inicialPagina" ><a class="
+                                        linkPaginacao " ></a><i class="fa fa-angle-left" ></i></li>
+
+                                    <li class="elementoEstPaginacao hoverPagina corFinal" ><a class="
+                                        linkPaginacao " >1</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >2</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >3</a></li>
+
+                                    <li class=" elementoEstPaginacao corNumeroPagina" ><a class="
+                                        linkPaginacao elementoFinal" ><i class="fa fa-angle-right" ></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- Contentor Listagem de Imóveis Alugados -->
+            <div class="painelSecundario  painelUser desligaPainel" id="idPainelImAlugados" >
+
+                <!--Painel de imóvel contido no sistema-->
+                <div class="limiteDash bordaPainel contentorListaImovel" >
+                    <!-- Header do Painel -->
+                    <div class="headerPainelImovel" >
+                        <div class="tituloHeaderDash" >
+                            <h2 class="tituloListaImoveis" >Lista de Imóveis Alugados </h2>
+                            <div class="abaPesquisaDash" style="display:none;">
+                                <a>Pesquisar Imóvel</a>
+                            </div>
+                            <button id="btChamaModal" class="btNewImovelDash" ><i class="fa fa-plus" ></i> Novo Imóvel</button>   
+                        </div>
+                                                               
+                    </div>
+
+
+                    <!-- Main do Painel -->
+                    <div class="mainPainelImovelDash" >
+                        <div class="divTabelaDash" >
+                            <table class="tabelaImovelTodos" >
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Vendedor</th>
+                                        <th>Valor</th>
+                                        <th>Bairro</th>
+                                        <th>Status</th>
+                                        <th>Foto</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >Casa de 1 quarto</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink" id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" id="meAlteraImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>                             
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="divPaginacaoDash" >
+                            <div class="contentorPaginacaoDash" >
+                                <ul class="listaPaginacaoDash" >
+                                    <li class="elementoEstPaginacao inicialPagina" ><a class="
+                                        linkPaginacao " ></a><i class="fa fa-angle-left" ></i></li>
+
+                                    <li class="elementoEstPaginacao hoverPagina corFinal" ><a class="
+                                        linkPaginacao " >1</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >2</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >3</a></li>
+
+                                    <li class=" elementoEstPaginacao corNumeroPagina" ><a class="
+                                        linkPaginacao elementoFinal" ><i class="fa fa-angle-right" ></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- Contentor Listagem de Agenda dos Corretores -->
+            <div class="painelSecundario  painelUser desligaPainel" id="idPainelAgendaCorretores" >
+
+                <!--Painel de imóvel contido no sistema-->
+                <div class="limiteDash bordaPainel contentorListaImovel" >
+                    <!-- Header do Painel -->
+                    <div class="headerPainelImovel" >
+                        <div class="tituloHeaderDash" >
+                            <h2 class="tituloListaImoveis" >Todas Agendas</h2>
+                            <div class="abaPesquisaDash" style="display:none;">
+                                <a>Pesquisar Imóvel</a>
+                            </div>
+                            <button id="btChamaModal" class="btNewImovelDash" ><i class="fa fa-plus" ></i> Novo Imóvel</button>   
+                        </div>
+                                                               
+                    </div>
+
+
+                    <!-- Main do Painel -->
+                    <div class="mainPainelImovelDash" >
+                        <div class="divTabelaDash" >
+                            <table class="tabelaImovelTodos" >
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Vendedor</th>
+                                        <th>Valor</th>
+                                        <th>Bairro</th>
+                                        <th>Status</th>
+                                        <th>Foto</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >Casa de 1 quarto</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink" id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" id="meAlteraImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>                             
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="divPaginacaoDash" >
+                            <div class="contentorPaginacaoDash" >
+                                <ul class="listaPaginacaoDash" >
+                                    <li class="elementoEstPaginacao inicialPagina" ><a class="
+                                        linkPaginacao " ></a><i class="fa fa-angle-left" ></i></li>
+
+                                    <li class="elementoEstPaginacao hoverPagina corFinal" ><a class="
+                                        linkPaginacao " >1</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >2</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >3</a></li>
+
+                                    <li class=" elementoEstPaginacao corNumeroPagina" ><a class="
+                                        linkPaginacao elementoFinal" ><i class="fa fa-angle-right" ></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <!-- Contentor Listagem de Imóveis Vendidos -->
+            <div class="painelSecundario  painelUser desligaPainel" id="idPainelImVendidos" >
+
+                <!--Painel de imóvel contido no sistema-->
+                <div class="limiteDash bordaPainel contentorListaImovel" >
+                    <!-- Header do Painel -->
+                    <div class="headerPainelImovel" >
+                        <div class="tituloHeaderDash" >
+                            <h2 class="tituloListaImoveis" >Lista de Imóveis Vendidos </h2>
+                            <div class="abaPesquisaDash" style="display:none;">
+                                <a>Pesquisar Imóvel</a>
+                            </div>
+                            <button id="btChamaModal" class="btNewImovelDash" ><i class="fa fa-plus" ></i> Novo Imóvel</button>   
+                        </div>
+                                                               
+                    </div>
+
+
+                    <!-- Main do Painel -->
+                    <div class="mainPainelImovelDash" >
+                        <div class="divTabelaDash" >
+                            <table class="tabelaImovelTodos" >
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Vendedor</th>
+                                        <th>Valor</th>
+                                        <th>Bairro</th>
+                                        <th>Status</th>
+                                        <th>Foto</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >Casa de 1 quarto</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink" id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" id="meAlteraImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sFechou" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>      
+                                    <tr>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >vazio</td> 
+                                        <td class="celulaTabelaTIM " ><span class="status sAberto" >vazio</span></td>
+                                        <td class="celulaTabelaTIM" >vazio</td>
+                                        <td class="celulaTabelaTIM" >
+                                            <ul class="listaOpCRUD" >
+                                                <li><a class="linkOpCRUD" ><i class="fa fa-remove" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlink"id="meAltera" ><i class="fa fa-edit" ></i></a></li>
+                                                <li><a class="linkOpCRUD altlinkImg" ><i class="fa fa-image" ></i></a></li>
+                                            </ul>
+                                        </td>                                       
+                                    </tr>                             
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="divPaginacaoDash" >
+                            <div class="contentorPaginacaoDash" >
+                                <ul class="listaPaginacaoDash" >
+                                    <li class="elementoEstPaginacao inicialPagina" ><a class="
+                                        linkPaginacao " ></a><i class="fa fa-angle-left" ></i></li>
+
+                                    <li class="elementoEstPaginacao hoverPagina corFinal" ><a class="
+                                        linkPaginacao " >1</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >2</a></li>
+
+                                        <li class="elementoEstPaginacao hoverPagina corNumeroPagina" ><a class="
+                                        linkPaginacao " >3</a></li>
+
+                                    <li class=" elementoEstPaginacao corNumeroPagina" ><a class="
+                                        linkPaginacao elementoFinal" ><i class="fa fa-angle-right" ></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            
+            <!-- Listagem de Pessoas -->
+
+
+            <!--Início do corpo da área lateral do corpo centeral -->
+            <div class="asideDash" style="display:none;" >
+                
+            </div>
+    	</main>
+    </div>
+    <script src="js/admin.js"  ></script>
+    
+    
+</body>
+</html>

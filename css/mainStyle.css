@@ -1,0 +1,1457 @@
+@import url(servico.css);
+@import url(sobre.css);
+@import url(contacto.css);
+@import url(login.css);
+
+* {
+    font-family:'DM sans', sans-serif;
+    box-sizing: border-box !important;
+}
+
+
+
+/*============== Variáveis ===============*/
+:root {
+    --hue: 223;
+    /*Cores HSL*/
+    --cor-primaria: #ffcc00;    
+    --cor-secundaria: #000; 
+    --cor-texto-normal: rgb(149, 149, 149);
+    
+}
+
+
+a {
+    text-decoration:none !important;
+}
+
+body {
+    font-family:'DM sans', sans-serif !important;
+    font-weight:normal !important;
+    font-size:0.9375rem !important;
+    color:rgb(107, 107, 107) !important;
+}
+img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.noPadding {
+    padding: 0 !important;
+}
+.ta-logo {
+    width:90px;
+}
+
+.bg-primary-color {
+    background-color:#FFF;
+}
+.bg-secondary-color {
+    background-color: #ece8ea; 
+}
+
+.bg-dark-color {
+    background-color: #050505;
+}
+
+.primary-color {
+    color: #050505;
+}
+.secondary-color {
+    color:#7a7a7a;
+}
+#navbar {
+    border-bottom:1px solid #e5e5e5;
+}
+#navbar a:hover {
+    color:#7a7a7a;
+}
+
+#navbar a.active {
+    border-bottom:1px solid var(--cor-primaria);
+}
+
+.navbar-brand {
+    display:flex;
+}
+
+.navbar-brand span {
+    font-weight:700;
+    font-size:1.5em;
+    margin-left:0.5em;    
+}
+
+#navbar-items .navbar-nav {
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+#navbar-items .nav-item {
+    margin:0 1em;
+}
+#navbar-items .nav-item:hover {
+    color:#111;
+}
+
+.navbar-collapse {
+    margin-left:100px;
+}
+
+/*--- Slider ---*/
+
+
+#slider {
+    
+    margin-bottom:1em;
+}
+
+#slider .carousel-caption {
+    bottom:3em;
+}
+
+#slider .carousel-caption h5 {
+    font-size:2.5em;
+    text-shadow:#000 2px 2px;
+}
+
+.btn {
+    border-radius:0;
+}
+
+#slider .btn {
+    padding:0.3em 0.8em;
+    font-size:1em;
+    margin-top:1em;
+}
+
+.carousel-control-prev i, 
+.carousel-control-next i {
+    color:#111;
+    font-size: 3em;
+}
+
+#slider div.carousel-indicators [data-bs-target] {
+    background-color:#222;
+    opacity:0.8;
+}
+
+#slider div.carousel-indicators .active {
+    background-color:#000;
+}
+
+@media (min-width: 768px) {
+    #slider .carousel-caption {
+        bottom:15em;
+    }
+    #slider .carousel-caption h5 {
+        font-size:4em;
+        text-shadow:#000 2px 3px;
+    }
+    #slider .btn {
+        padding:0.6em 1.6em;
+        font-size:1.2em;       
+    }
+
+    
+    #slider div.carousel-indicators  {
+        bottom: 7em;
+    }
+
+
+    div.linhaAnuncioImovel {        
+        grid-template-columns:1fr 1fr;        
+    }
+    .linkSolicitarImovel {
+        padding:4px 18px;
+        border-radius:4px;
+        
+    }
+    .linkSolicitarImovel:hover {
+        padding:4px 18px;
+        border-radius:4px;
+        background-color:var(--cor-primaria);
+        transition:background-color 0.4s;
+        color:var(--cor-secundaria);
+    }
+    div.divProprietario {
+
+        grid-template-columns:1fr 1fr;        
+        
+    }
+
+
+
+}
+
+
+
+@media (min-width: 1200px) {
+    div.linhaAnuncioImovel {        
+        grid-template-columns:1fr 1fr 1fr ;        
+    }
+    div.pg-linhaListaImovel  {
+        grid-gap: 30px 40px !important;
+    }
+
+    div.divProprietario {
+
+        grid-template-columns:1fr 1fr 1fr;        
+        
+    }
+
+    div.cardPropriedade {
+        width:80%;
+    }
+
+    div.cardImovel {        
+            
+    }
+
+    div.componentesImovel {   
+        grid-template-columns:3fr 1fr;
+        grid-template-areas:"imovelVisualizado inforRelacional" ;
+    }
+
+    div.informacoesRelaciondos {
+        display:block !important;
+    }
+
+
+}
+
+    
+/*--- Mini Banners ---*/
+#mini-banners {
+    margin-bottom:4em;
+}
+
+#mini-banners .card {
+    padding:2em 0.3em;
+    border-radius:0;
+    margin-bottom:1em;
+}
+
+#mini-banners i {
+    font-size: 4em;
+}
+
+#mini-banners .card-title {
+    margin-bottom:1.5em;
+}
+#mini-banners .btn {
+    margin-top:1.5em;
+    padding:0.6em 1.2em;
+}
+
+
+/*--- Destaques --- */
+
+
+#featured-container {
+    margin-bottom:4em;
+}
+.title {
+    font-size:38px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 400 !important;
+    margin-bottom:0.4em;
+    position:relative;
+}
+
+.titulosHomes {    
+    margin-bottom: 70px;
+}
+
+
+#featured-container div#featured-images {
+    margin-top:2em;
+}
+
+#featured-container div#featured-images .col-md-4 {
+    position:relative;
+    cursor:pointer;
+}
+#featured-container div#featured-images .col-md-4:hover > .banner-content {
+    opacity: 0.8;
+}
+#featured-container div#featured-images .banner-content {
+    position:absolute; 
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:#FFF;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    opacity:0.6;
+    transition: 0.5s;
+}
+
+
+
+
+
+/*INFO*/
+
+
+#info-content {
+   padding:4em 1em;
+   margin-bottom:4em;
+}
+
+#info-numbers {
+    margin:1.5em 0em;
+}
+#info-banner {
+    display:flex;
+    align-items:center;
+    margin-bottom:2.5em; 
+}
+
+#info-numbers h3 {
+    font-size:3em;
+}
+@media (min-width: 768px) {
+    #info-content {
+        padding:2.5em;
+    }
+}
+
+
+
+
+/* ================== Formatando Componentes do Footer   ==================*/
+#footerCima {
+    background-color: #ededed;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.contentorFooterCima {
+    width: 100%;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px 38px;
+}
+
+
+@media (min-width: 768px) {
+    
+    div.contentorFooterCima {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px 38px;
+    }
+
+    div.divParteBaixo {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;       
+        flex-direction: row !important;
+    }
+
+}
+
+@media (min-width: 992px) {
+    
+    div.contentorFooterCima {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 40px 38px;
+    }
+}
+
+
+.divSobreEmpresa {
+
+}
+.tituloComponenteSobre h3 {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: #242020;
+}
+.componenteFooterSobre p {
+    padding: 10px 0px;
+    font-size: 14px;
+    font-family: 'DM sans', sans-serif;
+}
+.linkMoreInfor {
+    color: #242020;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'DM sans', sans-serif;
+    cursor: pointer;
+}
+
+
+
+/* ====> News Letter  */
+
+.newsLetter {
+    width: 100%;  
+}
+
+.newsLetter form {
+    width: 100%;
+}
+
+.conteinerInputRodape {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.conteinerInputRodape input {
+    padding: 8px 4px;
+    font-size: 16px;
+    color: #2b2828;
+    font-family: 'DM sans', sans-serif;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 1px solid #6f6f6f;
+}
+
+.conteinerInputRodape button {
+    background-color: #1678dc;
+    border: 1px solid #1678dc;
+    color: white;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+
+
+
+/*======= Imóveis mais vendidos no Rodape =======*/
+
+.subTituloSobreRodape {
+    font-size: 16px;
+}
+.caixaCards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px 40px;
+}
+
+.cardRodapeImovel {
+    width: 50%;
+}
+.imgCardRodape img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.listaDetalhesCardRodape  {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.listaDetalhesCardRodape li {
+    margin: 3px 0px;
+}
+
+.nomeImovelCardRadape {
+    font-size: 15px;
+    color: #022868;
+    font-weight: bold;
+}
+.enderecoImovelCardRodape {
+    font-size: 12px;
+    color: #8f8f8f;
+}
+
+.precoImovelCardRodape  span {
+    color: white;
+    background-color: #022868;
+    font-size: 14px;
+    padding: 4px 8px;
+    display: inline-block;
+    border-radius: 4px;
+}
+.nomeEmpresaRodape {
+    font-weight: bold;
+    color: black;
+}
+.listaContactoDetalhes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.listaContactoDetalhes li span {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.listaLinksRodape  {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.listaLinksRodape li {
+    margin: 10px 0px;
+}
+.linkRodape {
+    color: #686868;
+}
+
+
+
+
+
+
+
+/* =========== Configurando a parte de baixo do rodape   ===========*/
+#footerBaixo {
+    padding: 10px 0px;
+}
+
+.divParteBaixo {
+    display: flex;
+    flex-direction: column;
+}
+
+.copyRight p{
+    font-size: 12px;
+}
+
+
+
+@media (min-width: 768px) {
+    #news-container {
+        padding-right:2em;
+    }
+    #links-container {
+        padding-left:2em;
+    }
+    #contact-container {
+        padding:0 2em;
+        border-left:1px solid #7a7a7a;
+        border-right:1px solid #7a7a7a;
+    }
+     #mini-banners {
+        margin-top: -6em;
+    }
+
+    .title  {
+        font-size: 2.4em;
+    }
+    .title:before {
+        bottom:1.5em; 
+    }
+    #featured-container div#featured-images .banner-content {
+        opacity:0;
+    }
+
+    #news-container {
+        padding-right:2em;
+    }
+    #links-container {
+        padding-left:2em;
+    }
+    #contact-container {
+        padding:0 2em;
+        border-left:1px solid #7a7a7a;
+        border-right:1px solid #7a7a7a;
+    }
+}
+
+
+.acessoSO {
+    padding:2px 18px !important;
+    background-color:var(--cor-primaria);
+    cursor:pointer;
+    border-radius:4px;
+    margin:8px 0px;
+}
+
+
+@media (min-width:992px ) and (max-width:1199px ) {
+
+    #navbar .container {
+       max-width:100%;
+    }
+
+    div.divProprietario {
+        grid-template-columns:1fr 1fr 1fr;   
+    }
+
+}
+
+@media (max-width:1199px ) {
+
+    div.listaTotalImoveis {
+        justify-items: center !important;
+    }
+    /*div.cardImovel {
+        width: 70%;
+    }*/
+}
+
+
+
+.linhaAnuncioImovel {
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-gap:30px 12px;
+    padding:0.25rem;
+    margin-bottom:6.25rem;
+}
+
+.cardImovel {
+
+    width:100%;
+    box-shadow:0px 0px 3px 0px black;
+    border:1px solid white;
+    border-radius:0.375rem;
+    display: grid;
+    grid-template-areas:  'headerCard' 
+                         'bodyCard' 
+                         'footerCard';
+
+}
+
+
+/*--- Card do Imóvel a ser Publicado no site ---*/
+.headerCardImovel {
+    
+    grid-area: headerCard;
+    width:100%;
+    height: 190px !important;
+    position:relative;   
+    background-color:var(--cor-primaria);
+
+}
+
+
+.referenciaImg {
+    
+    width:100%;
+    height: 100%;
+    grid-area:referenceImg;
+
+}
+
+.elementoFlutuante {
+    position:absolute;
+    z-index:2
+}
+
+.referenciaImg img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+
+.referenciaImgCorretor {
+    right:0;
+    bottom:0;
+    width:3rem;
+    height:3rem;
+}
+
+.referenciaImgCorretor {
+    
+    right:0.625rem;
+    bottom:-1.125rem;
+    width:3rem;
+    height:3rem;
+    
+    
+}
+
+
+.referenciaImgCorretor img {
+    border-radius:100%;
+    border:2px solid white;
+}
+
+.etiquetaImovel {
+    right:20px;
+    top:16px;
+    padding:2px 8px;
+    font-size:14px;
+    border-radius:0.25rem;
+    font-weight:700;
+    color:var(--cor-secundaria);
+    background-color:var(--cor-primaria);
+}
+.etiquetaAluguel {
+    background-color:#343434 !important;
+    color:var(--cor-primaria) !important;
+}
+.bodyCardImovel {
+    grid-area: bodyCard;
+    padding:24px 15px;
+}
+
+.bodyCardImovel h3 {
+    color: #313033;
+    font-family:'Poppins', sans-serif;
+    margin-top:0.625rem;
+    font-size: 22px !important;
+}
+
+.bodyCardImovel p {
+    font-size:0.875rem;
+    color:#5d5d5d;
+}
+
+.bodyCardImovel ul{
+    list-style:none;    
+    display:flex;
+    padding:0;
+    margin:0;
+}
+
+.bodyCardImovel ul li{
+    font-size:1rem;
+    color:var(--cor-texto-normal);
+    margin:0px 4px;
+}
+
+.footerCardImovel {
+    grid-area: footerCard;
+    padding:15px 18px;
+    border-top:1px solid rgb(172, 172, 172);
+}
+
+.valorImovel {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 100%;
+    height: 100%;
+
+}
+.valorImovel a {
+    text-decoration:none;
+}
+.precoImovel {
+    color:var(--cor-secundaria);
+    font-weight:700;
+    font-size:18px;
+}
+
+
+/* --- SubLista --- */
+.tenhoSubLista {
+    position:relative;
+}
+.tenhoSubLista div {
+    overflow:hidden;
+    position:relative;
+    width:100%;
+    height:0;
+    transition:height 0.4s;
+}
+
+.aparece {
+    height:115px !important;
+}
+.subListaVenda {
+    height:100%;
+    list-style:none;
+    background-color:rgb(24, 24, 24);
+    padding:15px;
+    border-radius:6px;
+    display:flex;
+    flex-direction:column;
+}
+.subListaVenda li {
+    padding:2px 0px;
+}
+.sublinkNav {
+    display:block;
+    padding:8px 0px;
+    color:white;
+    text-decoration:none;
+}
+.nav-item {
+    cursor:pointer;
+}
+
+@media (min-width: 992px){
+    .tenhoSubLista div {
+        position:absolute;
+        width:300%;
+    }
+
+    div.contentorCidades {        
+        grid-template-columns: 1fr 1fr;        
+    }
+
+    div.contentorImgCidade {
+        position:relative;
+    }
+    div.contentorImgCidade:hover div.elementoHoverCidade{
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        background-color:rgba(0,0,0,0.5);
+        transition:all 0.8s;
+
+        display:flex !important;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        border-radius:6px;
+
+    }
+
+    div.contentorImgCidade:hover div.elementoHoverCidade i,
+    div.contentorImgCidade:hover div.elementoHoverCidade span{
+        color:white;
+    }
+
+    div.contentorImgCidade:hover div.elementoHoverCidade i{
+        font-size:28px;
+    }
+    div.contentorImgCidade:hover div.elementoHoverCidade span{
+        font-size:12px;
+        margin:4px 0px;
+        color:rgb(231, 231, 231);
+    }
+
+    div.contentorCaixa {
+        width: 75%;
+    }
+    div.listaDeImoveis {
+        width: 90%;        
+    }
+    div.pg-listaImovel {
+        width: 90% !important;
+    }
+
+    /*div.componentesImovel {   
+        grid-template-columns:3fr 1fr;
+        grid-template-areas:"imovelVisualizado inforRelacional" ;
+    }*/
+    div.imovelVisualizado {
+        grid-area:imovelVisualizado;
+    }
+    div.informacoesRelaciondos {
+        grid-area:inforRelacional;
+    }
+
+    div.tm-solicitar-slider {
+        height: 350px !important;        
+    }
+    .imgVisualizada {
+        height: 350px !important;
+    }
+    div.imgVisualizada {
+        overflow:hidden !important;
+    }
+
+    
+
+
+    div.listaTotalImoveis {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+    
+}
+
+@media (max-width: 350px) {
+    ul.meEliminaNo350px {
+        display:none;
+    }
+
+    div.contentorImgCidade {
+        position:relative;
+        width:100%;
+    }
+
+    div.elementoHoverCidade{
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        background-color:rgba(0,0,0,0.2);
+        transition:all 0.8s;
+
+        display:flex !important;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        border-radius:6px;
+    }
+
+    div.elementoHoverCidade i,
+    div.elementoHoverCidade span{
+        color:white;
+    }
+
+    div.elementoHoverCidade i{
+        font-size:28px;
+    }
+    div.contentorImgCidade:hover div.elementoHoverCidade span{
+        font-size:12px;
+        margin:4px 0px;
+        color:rgb(231, 231, 231);
+    }
+}
+
+
+
+
+/* ---Trabalhando as Propriedades ---*/
+
+.divProprietario {
+   
+    display:grid;
+    grid-template-columns:1fr;
+    grid-gap:1.25rem 2.5rem;
+    margin-bottom:6.25rem;
+    
+}
+
+.cardPropriedade {
+    
+    width:100%;
+    height:21.875rem;    
+    border-radius:0.375rem;
+    position:relative;
+}
+.link-tipo {
+    display: block !important;
+    text-decoration:none;
+}
+.divReferenceImage {
+    width:100%;
+    height:100%;
+}
+.divTipo {
+
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background-color:rgba(0,0,0,0.5);
+    color:white;
+    border-radius:0.375rem;
+    z-index:2;
+
+}
+
+.nomeTipo {
+    font-size:26px;
+    color:white;
+}
+.link-tipo {
+    position:relative;
+}
+.iconeTipo {
+    width:3.75rem;
+    height:3.75rem;
+    border-radius:0.375rem;
+}
+
+.esp {
+    margin-top:150px
+}
+
+.link-tipo {
+    display:block;
+    text-decoration:none;
+    position:relative;
+    cursor:pointer;
+}
+
+
+/*----------------- Anúncio das Cidades de Angola -----------------------*/
+
+
+.contentorCidades {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap:6.25rem 0rem;
+    margin-bottom:9.375rem;    
+}
+.cardCidade {
+    width:100%;
+    height:8.75rem;
+    padding:0.5rem;
+    
+}
+
+.contentorConteudo{
+    display:flex;
+    height:12.5rem;
+    align-items:center;
+}
+
+.contentorImgCidade {
+    width:11.875rem;
+    height:11.25rem;
+}
+div.contentorImgCidade img {
+    width:100%;
+    height:100%;
+    border-radius:0.375rem;
+}
+
+.contentorConteudo ul{
+    list-style:none;
+}
+.contentorConteudo ul li:nth-child(1) {
+    font-size:18px;
+    color:rgb(21, 20, 20);
+    font-weight:bold;
+}
+
+.contentorConteudo ul li:nth-child(2) {
+    font-size:14px;
+    color:rgb(111, 111, 111);
+}
+
+.caixaImoveisSimilares {
+    display:grid;
+    width:100%;
+    grid-template-columns:1fr; 
+    grid-gap:60px 0px;
+}
+
+.imovelSimilar {
+    width:100%;
+    height:282px;
+    border-radius:4px;
+    position:relative;
+}
+.imovelSimilar::after {
+    content:" ";
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.5);
+    width:100%;
+    height:100%;
+    border-radius:4px;
+}
+.caixaIimglSimilar {
+    width:100%;
+    height:100%;
+    border-radius:4px;
+}
+
+
+.caixaIimglSimilar img {
+    width:100%;
+    height:100%;
+    border-radius:4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------- Página da Solicitação do Imóvel  --------------------------------------------------*/
+.caixaCentral {
+    margin-bottom:60px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.contentorCaixa {
+    width: 94%;
+}
+
+.enderecoPagina span {
+    font-size:14px;
+}
+
+.paginaInicial {
+    color:rgb(66, 66, 66);
+    font-weight:bold;
+}
+
+.bodySolicitarImovel  {
+    margin-top:1.2rem;
+}
+
+.nomeImovel {
+    display:block;
+    font-size:26px;
+    font-weight:500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.componentesImovel {
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-areas:"imovelVisualizado" ;
+    padding-top:40px;
+    padding-bottom:40px;
+}
+
+.imovelVisualizado {
+    grid-area:imovelVisualizado;
+}
+.informacoesRelaciondos {
+    grid-area:inforamacaoRelacionado;
+}
+
+.imgVisualizada {
+    width:100%;
+    height:290px;
+    position:relative;
+}
+
+.caixaImg {
+    width: 100%;
+    height:100%;
+}
+.imageImovel {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.caixaImg {
+    width:100% !important;
+    padding:0 !important;
+    margin:0 !important;
+    position:relative !important;
+}
+
+.caixaImg img {
+    width:100% !important;
+    height:100% !important;
+    object-fit: cover !important;
+}
+
+.cabe {
+    width:100% !important;
+    height:290px !important;
+    position:relative !important;
+}
+
+.tm-home {
+    width:100% !important;
+    height: 500px !important;
+    margin-top:102px !important;
+}
+.tm-home img {
+    width:100% !important;
+    height:100% !important;
+}
+
+.tm-solicitar-slider {
+    width:100% !important;
+    height: 290px !important;
+}
+.tm-solicitar-slider img {
+    width:100% !important;
+    height:100% !important;
+}
+
+.caixaBtn-next-prev {
+    position:absolute;
+    top:0;
+    right:18px;
+    width:80px;
+    height:50px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.caixaBtn-next-prev button {
+    font-size:6px;    
+    color:#fff !important;
+}
+
+.caixaBtn-next-prev button i {    
+    color:#fff !important;
+    padding:8px 12px;
+    background-color:rgb(7, 112, 210);
+}
+
+
+.h1DestaSessao {
+    font-size:24px;
+    color:rgb(10, 10, 10);
+    font-weight:400;
+}
+.componente {
+    font-weight:700 !important;
+    color:rgb(40, 39, 39) !important;
+}
+
+.precoImovel {
+    color:#044465;    
+}
+
+.borda-bottom {
+    border-bottom:1px solid rgb(187, 187, 187);
+    padding-bottom:10px;
+}
+
+.listaCaracteristicaImovel {
+    display:flex !important;
+    justify-content:flex-start;
+}
+
+.listaCaracteristicaImovel ul:nth-child(2){
+    margin-left:80px;
+}
+.listaCaracteristicaImovel ul li {
+    padding:16px 0px;
+}
+
+.mapImovel {
+    
+    width:100%;
+    height:280px;
+
+}
+
+.caixaInforCorretor {
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "img conteudoCorretor";
+}
+
+.caixaImgCorretor {
+    width:100px;
+    height:100px;
+    grid-area:img;
+}
+.descicaoCorretor {
+    grid-area:conteudoCorretor;
+}
+.caixaImgCorretor img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius:4px;
+    box-shadow:0px 5px 10px rgb(221, 221, 221);
+}
+
+.caixaForm {
+    width:100%;
+    height:100%
+}
+.bodyimovelSimilar {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    display:flex;
+    flex-direction:column;    
+    z-index:2; 
+    margin-bottom:20px;
+}
+
+.bodyimovelSimilar ul {
+    list-style: none;
+}
+
+.bodyimovelSimilar ul li {
+    margin:12px 0px;
+}
+
+.precoImovelSimilar {
+    background-color:rgb(13, 68, 179);
+    color:white;
+    padding:4px 18px;
+    border-radius:4px;
+    font-size:16px;
+}
+.nomeImovelSimilar {
+    color:white;
+    padding:8px 0px;
+    font-size:22px;  
+}
+.enderecoImovelSimilar {
+    color:rgb(202, 202, 202);
+    padding:8px 0px;
+    font-size:15px;
+}
+
+
+@media (min-width: 560px) {
+    div.caixaImoveisSimilares {        
+        grid-template-columns:1fr 1fr; 
+        grid-gap:60px 30px;
+    }
+
+    div.imovelSimilar {        
+        height:200px;
+        width:90%;
+    }
+    div.bodyimovelSimilar {                
+        margin-bottom:10px;
+    }
+
+    div.bodyimovelSimilar ul li {
+        margin:6px 0px;
+        font-size:14px !important;
+    }
+}
+
+.contentorRelaciondo {
+    width:100%;
+    height:100%;
+    padding:20px;    
+}
+
+.contentorPesquisImovel {
+    display:grid;
+    grid-template-columns:1fr;
+    width:100%;
+    grid-gap:30px 0px;
+}
+
+
+.tm-h2 {
+    font-size:20px !important;
+}
+
+.contentorDestaqueImovel {
+    display:grid;
+    grid-template-columns:1fr;
+    grid-gap:50px 0px;
+}
+.contentorDestaqueImovel a {
+    color:rgb(135, 135, 135);
+}
+
+.imgImovelDestaque {
+    width:100%;
+    height:170px;   
+}
+.imgImovelDestaque img {
+    width:100%;
+    height:100%;
+    border-radius:2px;
+}
+
+.descricaoImovelDestaque ul {
+    display:grid;
+    grid-template-columns:1fr;
+    grid-gap:16px 0px;
+}
+
+.tituloImovelDestaue {
+    font-size:18px;
+    color:rgb(28, 29, 30);
+    font-weight:bold;
+}
+
+.enderecoImovelDestaque {
+    font-size:14px;
+}
+
+.precoImovelDestaque {
+    background-color:rgb(6, 94, 176);
+    padding:4px 22px;
+    border-radius:2px;
+    color:white;
+    margin-top:10px;
+}
+
+.descricaoImovelDestaque div:nth-child(3) {
+    margin-top:10px;
+}
+
+
+.tituloDestaques  {
+    color:rgb(28, 28, 28);
+    font-size:28px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+    padding:12px 0px;
+    position:relative;
+}
+
+.tituloDestaques::after {
+    content:" ";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100px;
+    height:2px;
+    background-color:rgb(241, 222, 11);
+}
+
+.listImoveisGerais {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px 30px;
+    border: 1px solid orange;
+}
+
+@media (min-width: 670px) and (max-width: 991px) {
+    
+    div.listaDeImoveis {
+        width:90% !important;
+    } 
+
+    div.listaTotalImoveis {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px 28px;
+    }
+
+
+}
+
+@media (min-width: 480px) and (max-width: 669px) {
+    
+    div.listaDeImoveis {
+        width: 65% !important;
+    } 
+
+    div.listaTotalImoveis {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px 28px;
+    }
+
+
+}
+
+
+@media (max-width: 479px) {
+
+    div.listaTotalImoveis {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px 28px;
+    }
+
+
+}
+

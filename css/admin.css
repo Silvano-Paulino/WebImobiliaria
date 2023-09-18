@@ -1,0 +1,1762 @@
+
+
+/*=================== Apagar Paineis ==================*/
+.displayPainelDash {
+	display: none !important;
+}
+
+/*============== @Contentores Gerais@ ======>*/
+.containerGeralDash {
+	width: 100%;
+	background-color: blue;
+	display: flex;	
+}
+
+#headerDash {
+	background-color: white;
+	width: 225px;
+	position: fixed;
+	height: 100vh;
+
+}
+#mainDash {
+	position: absolute;
+	width: calc(100% - 225px);
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--background-Dash);
+	min-height: 100vh;
+}
+
+
+/*============= @HEADER@ =============*/
+
+/*====== Contentores Headers ======*/
+
+.contentorLogoDash {	
+	margin-bottom: 20px;
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+}
+.contentorHeaderDash {
+	display: flex;	
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+.contentorImgLogoDash {
+	width: 30px;
+	height: 30px;
+}
+.empresaDash {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+}
+.menuLateralDash {
+
+}
+.nomeEmpresaDash {
+	font-family: 'Poppins', sans-serif;
+	font-size: 21px;
+	margin-left: 3px;
+	font-weight: bold;
+}
+/*==== Menus Headers ====*/
+.contentorListaDash {
+	width: 100%;	
+}
+.navMenuDash {
+	width: 90%;
+}
+.listaDash {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.linkMenuLateralDash {
+	color: #081f58;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: -10px;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+.margemDash {
+	margin: 4px 0px;
+}
+.textoLinkDash {
+	font-size: 8px;
+}
+.iconeNoFimDash {
+	padding-right: 12px;
+}
+.soNomeLinkDash {
+	display: flex;
+}
+.soNomeLinkDash i {
+	font-size: 18px;
+	margin-right: 0.625rem;
+}
+.linkMenuLateralDash:hover {
+	/*background-color: var(--cor-base-secundaria);*/
+	/*color: white;*/
+	transition: background-color 0.3s ease;
+}
+.linkMenuLateralDash:active {
+	background-color: #707070;
+	transition: background-color 0.1s ease;
+}
+.textoLinkDash {
+	font-size: 14px;	
+}
+.subMenuDash {
+	display: block;
+	background-color: #c5c4c4;
+}
+
+.transitionDisplayDash {
+	transition: all 3s;
+}
+.subLinkDash {
+	position: relative;	
+	padding-left: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 13px;
+	color: #000e32;
+	cursor: pointer;
+	display: flex;
+	align-items:center;
+}
+
+.subLinkDash i {
+	margin-right:4px;
+}
+
+.subLinkDash:hover {
+	color: white;
+}
+.subLinkDash:hover {
+	background-color: #1d1d1d;
+}
+.activaSubMenuDash {
+	display: block;
+}
+.displayListaDash {
+	display: none;
+}
+
+
+
+
+/*==================== Corpo  Central ==================*/
+
+/*=========== SÓ CONTENTORES ==========*/
+	/*=====>*/
+	.cabecalhoDash {
+		width: 100%;
+		border-bottom: 1px solid #9b9c9b;
+		display: flex;
+		justify-content: center;
+		background-color: white;
+	}
+	.contentorCabecalhoDash{
+		display: flex;
+		justify-content: space-between;
+		height: 42px;
+		width: 95%;
+	}
+	.divHeaderCorpo{
+		
+	}
+	.divHeaderCorpo1 {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+/*============ Só elemento dos contentores =========*/
+
+/*====== Elementos do contentor divHeaderCorpo ========*/
+	/*======>*/
+	.tituloUserDash {
+		font-family: 'Poppins', sans-serif;
+		position: relative;
+		font-size: 16px;
+		font-weight: 400;
+		color: var(--cor-base-secundaria);		
+	}
+	.tituloUserDash::after {
+        content:" ";
+        bottom:0;
+        left:0;
+        width:50%;
+        height:2px;
+        position:absolute;
+        background-color:var(--base-color);
+        border-radius:3px;
+        transition: 0.5s ease-in-out;
+        }
+    .tituloUserDash:hover::after{
+        width:100%;
+    }
+
+
+	/*===== INPUT BUSCA NO DASH ====*/
+		/*=====>*/
+		.inputDashMargen {
+			margin-left: 30px;
+		}
+		.corTextoDash {
+			color: var(--cor-base-secundaria) !important;
+			background-color: #cecece !important;
+		}
+
+
+	/*======= USUÁRIO =======*/
+
+	/*======== SÓ CONTENTORES ======*/
+		/*======>*/		
+		.divHeaderCorpo2 {
+		}
+		.contentorPerfilUserDash {
+			display: flex;
+			height: 100%;
+			align-items: center;
+		}
+		.divInforUserDash {
+			display: flex ;
+			align-items: center;
+			height: 100%;
+		}
+		.divImgUserDash {
+			width: 38px;
+			height: 38px;
+		}
+		.divImgUserDash img{
+			border-radius: 30px;
+		}
+		.nomeUserDash {
+			font-size: 16px;
+			color: var(--cor-base-secundaria);
+			font-family: 'Poppins', sans-serif;
+		}
+		.OpUser {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			margin-left: 30px;
+		}
+		.listaOpUserDash {
+			width: 100%;
+			height: 100%;
+		}
+		.linkOpUserDash {
+			position: relative ;
+			display: block;
+			margin: 0px 8px;
+			padding-top: 6px;					
+			padding-bottom: 2px;
+			padding-left: 6px;
+			padding-right: 6px;			
+			border-radius: 3px;
+			cursor: pointer;
+		}
+		.corAzulDash {
+			background-color: var(--base-color-alt);
+			color: var(--base-color);
+			transition: background-color 0.3s ease;
+		}
+		.corVermelhoDash {
+			background-color: #ffafaf;
+			color: #bf1313;
+		}
+		.corAzulDash:hover {
+			background-color: var(--base-color);
+			color: var(--base-color-alt);
+		}
+		.corVermelhoDash:hover {
+			background-color: #bf1313;
+			color: #ffafaf;
+		}
+		.numeroNotificar {
+			position: absolute;
+			font-size: 12px;
+			padding: 2px 8px;
+			background-color: #f20707;
+			top: -4px;
+			right: -8px;
+			border-radius: 100%;
+			z-index: 100;
+			color: white;
+		}
+
+
+
+
+/*===================== CORPO DASH =====================*/
+
+/*=========== CONTENTORES GERIS ===============*/
+
+
+
+/*=========== RESULTADOS ==========*/
+	/*=======>*/
+	.contentorCardsDash {
+		width: 100%;		
+		display: flex;
+		justify-content: center;
+	}
+	.limiteCardsDash {
+		width: 95%;
+		display: flex;
+		padding-top: 20px;
+	}
+
+	.cardDash {
+		width: 260px;
+		height: 100px;
+		padding-bottom: 10px;
+		background-color: white;
+		border: 1px solid white;
+		border-radius: 10px;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-areas: "icone inforCard";
+		align-content: end;
+	}
+	.contentorIconeCardDash {
+		display: flex;
+		font-size: 16px;
+		align-items: center;		
+		grid-area: icone;
+	}
+	div.cardDash .contentorIconeCardDash i {
+		font-size: 32px;
+		padding-left: 20px;
+		color: var(--base-color);
+	}
+	.contentorInforCardsDash {		
+		grid-area: inforCard;
+		padding-right: 4px;
+	}
+	.textCardDash{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.numeroEmPercentagemDash {
+		font-size: 13px;	
+		background-color: #9ed7ca;
+		color: #07ab86;
+		padding-top: 3px;
+		padding-left: 4px;
+		padding-right: 4px;
+		border-radius: 4px;
+	}
+	.tituloCardDash {
+		font-size: 14px;
+		padding-top: 10px;
+		padding-bottom: 4px;
+		color: #021b45;
+	}
+	.numeroDeClientes {
+		font-size: 22px;
+		color: #021b45;
+	}
+	.contentorPercentagem {
+		display: flex;
+		align-items: flex-end;
+	}
+	.outraCor {
+		background-color: #cecece !important;
+	}
+	.margemCards {
+		margin-left: 20px;
+	}
+
+
+/*=============== TABELAS DOS CORRESTORES EM DESTAQUES ============>*/
+/*============== Contentores ========>*/
+	/*=========>*/
+	.contentorInforResumidasDash {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.contentorMain {
+		width: 95%;
+		padding-top: 20px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "tabelas imoveis";
+		grid-gap: 20px;
+	}
+	.contentorInforCorpo {
+		grid-area: tabelas;
+	}
+	.imoveisVendidos {
+		grid-area: imoveis;
+	}
+	.divTabela {
+		background-color: white;
+		border-radius: 12px;
+		padding-top: 20px;
+	}
+	/*========== Elementos da divTabela ===========*/
+		/*=======>*/
+		.tituloDivTabela {
+			font-weight: 400;
+			font-family: 'Poppins', sans-serif;
+			font-size: 22px;
+			color: var(--base-title);
+			
+			padding-left: 20px;
+			padding-bottom: 10px;
+		}
+		.tabelaDestaquesDash {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+		.tituloTabelaDash {
+			text-align: left;
+			padding: 16px 8px;
+			border-bottom: 1px solid #bdbdbd;
+		}
+		.areaTabelaDash {
+			padding: 12px 8px;			
+		}
+		.conteudoTabelaDash {
+			font-size: 16px;
+		}
+		.imgCorretorPrefer {
+			width: 38px;
+			height: 38px;
+			border-radius: 38px;
+		}
+		.imgCorretorPrefer img {
+			border-radius: 38px;
+		}
+		.corretorStatus {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		/*===== Cor do background do Carregador*/
+		.corCarregadorDash1 {			
+			background-color: #b4e0bb;
+		}
+		.corCarregadorDash2 {
+			background-color: #f8c594;
+		}
+		.corCarregadorDash3 {
+			background-color: #ba9c7f;
+		}
+		.corCarregadorDash4 {
+			background-color: #f4cbcb;
+		}
+		/*=========== Cor after dos Carregadores ====>*/
+		.carregadorDash1::after {
+			content: " ";
+			width: 60%;
+			height: 100%;
+			background-color: #24c73f;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.carregadorDash2::after {
+			content: " ";
+			width: 30%;
+			height: 100%;
+			background-color: #ff8813;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.carregadorDash3::after {
+			content: " ";
+			width: 20%;
+			height: 100%;
+			background-color: #ab6a2a;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.carregadorDash4::after {
+			content: " ";
+			width: 20%;
+			height: 100%;
+			background-color: #c00404;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		/*==== Cor do Texto do background do Carregador*/
+		.corTextoCarregadorDash1 {
+			color: #24c73f;
+		}
+		.corTextoCarregadorDash2 {
+			color: #ff8813;
+		}
+		.corTextoCarregadorDash3 {
+			color: #ab6a2a;
+		}
+		.corTextoCarregadorDash4 {
+			color: #c00404;
+		}				
+		.carregadorDash {			
+			padding: 2px;
+			width: 100%;
+			display: block;
+			margin-top: 2px;
+			position: relative;
+		}
+
+
+/*=========== Propriedades Novas ======>*/
+	/*===== Somente Contentores =====>*/
+	.contentorAddPropriedadesDash {
+		width: 100%;
+		margin-top: 20px;
+		background-color: white;
+		border-radius: 16px;
+	}
+	.divAddPropriedade {
+		padding: 35px 15px;
+	}
+	.cabecalhoPropriedade {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 8px;
+	}
+
+	/*=============== Elementos dos contentores ==============*/
+	.tituloAddPropriedade {
+		font-size: 22px;
+		color: var(--base-title);
+		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
+	}
+	.btAddPropriedade {
+		background-color: var(--base-color-alt);
+		color: var(--base-color);
+		font-size: 12px;
+		cursor: pointer;
+		border: 1px solid var(--base-color-alt);
+		padding: 0px 8px;		
+		border-radius: 4px;
+	}
+	.btAddPropriedade:hover {
+		background-color: var(--base-color);
+		color: white;
+		border: 1px solid var(--base-color);
+	}
+	.listaPropriedades {
+		display: flex;
+		flex-direction: column;	
+	}
+	.linkAddPropriedade {
+		padding: 10px 6px;
+		display: block;		
+		margin: 16px 0px;
+		border-radius: 4px;
+	}
+
+
+
+/*============ Casas Vendidos ============*/
+	/*========= SÓ CONTENTORES ====>*/
+	.imoveisVendidos {
+		
+	}
+	.contentorImoveisVendidos {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 190px 190px 190px 190px;
+		grid-gap: 20px 0px;
+	}
+	.imovelVendido {
+		background-color: white;
+		border: 1px solid white;
+		height: 100%;
+		width: 100%;
+		border-radius: 8px;		
+		cursor: pointer;
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-areas: "conteudo1 conteudo2 conteudo3";
+		padding: 8px;
+	}
+
+	/*================ Elementos dos contentores Vendidos ===============*/
+		/*=========>*/
+		.areaCasaDash1 {
+			grid-area: conteudo1;
+			width: 160px;
+			height: 160px;
+			position: relative;	
+		}
+		.areaCasaDash2 {
+			grid-area: conteudo2;
+			padding: 8px;
+			display: flex;	
+			flex-direction: column;					
+		}
+
+		.areaCasaDash3 {
+			grid-area: conteudo3;
+		}
+		.cituacao {
+			display: block;
+			position: absolute;
+			background-color: var(--base-color);
+			color: white;
+			font-size: 14px;
+			padding: 2px 16px;
+			border-top-right-radius: 2px;
+			border-bottom-right-radius: 2px;
+			top: 0;
+			left: 0;
+			margin-top: 20px;
+		}
+		.areaCasaDash1 img{
+			border-radius: 4px;
+		}
+		.titImovelVendidoDash {
+			color: #494949;
+			font-weight: 700;
+		}
+
+		.titleImovelVendido {
+			font-size: 14px;
+			font-weight: 700;
+			font-family: 'Poppins', sans-serif;
+			color: #464646;
+		}
+		.elementoListVendidoDash {
+			padding: 4px 0px;
+			font-size: 14px;
+		}
+		.subListaCarat {
+			display: flex;			
+		}
+		.elementoSubListaCarat{
+			font-size: 14px;
+			padding: 0px;
+		}
+		.valorImovel {
+			color: var(--base-color);
+			margin-top: 15px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.conteudoArea3Dash {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.textoDoCorretor {
+			font-size: 0.875rem;
+		}
+		.imgCorretorResp {
+			width: 38px;
+			height: 38px;
+			border-radius: 100%;
+		}
+		.nomeBroker {
+			display: block;
+			text-align: center;		
+			font-size: 13px;	
+			color: #010737;
+		}
+		.marginElement {
+			margin-bottom: 18px;
+		}
+		.imgCorretorResp img {
+			border-radius: 100px;
+		}
+		.imovelVendido:hover{
+			border: 1px solid var(--base-color);
+		}
+
+
+
+
+/*=============== Paineis De Listagem de Imóvel ==================*/
+	/*======= Só contentores ====>*/
+	.contentorListaImovel  {
+		margin-top: 28px;
+		background-color: white;		
+		border-radius:4px;	
+		padding:6px 12px;
+		box-shadow:0px 10px 25px rgb(146, 146, 146);
+	}
+	.listaImoveisTodosDash {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 4px 0px;
+	}
+	.bordaPainel {
+		
+	}
+	.limiteDash {
+		width: 95%;
+		position: relative;
+	}
+	.headerPainelImovel {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.paddingLeft-pra-te {
+		padding-left: 30px;
+		margin-top: 20px;
+	}
+
+
+
+	.tituloListaImoveis {
+		color: var(--base-title);
+		font-size: 26px;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
+	}
+	.btNewImovelDash {
+		background-color: var(--base-color);
+		border: 1px solid var(--base-color);
+		padding: 8px 18px;
+		border-radius: 4px;
+		font-family: 'DM sans', sans-serif;
+		cursor: pointer;
+		margin-top: 10px;
+		color: white;
+	}
+	.btNewImovelDash:hover {
+		background-color: white;
+		border: 1px solid white;
+		box-shadow: 0px 0px 3px 0px black;
+		color: var(--base-color);
+	}
+	.divTabelaDash {
+		display:flex;
+		justify-content:center;
+		overflow-x:auto;
+		position:relative;
+		padding:10px;
+	}
+
+	.tabelaImovelTodos {
+		border-collapse:collapse;
+		table-layout: fixed;
+		width:100%;	
+		border-radius:3px;		
+		border:1px solid white;		
+		box-shadow:0px 5px 10px rgb(202, 202, 202);			
+	}	
+	table.tabelaImovelTodos thead {
+		box-shadow:0px 5px 10px rgb(202, 202, 202);
+		width:100%;
+		padding:10px;
+	}
+	table.tabelaImovelTodos tbody tr:nth-child(even){
+		background-color:rgb(230, 227, 227);
+	}
+	.status {
+		padding:2px 3px;
+	}
+	.sFechou{
+		background-color:rgb(158, 199, 172);
+	}
+	.sAberto {
+		background-color:rgb(251, 128, 128);
+	}
+	table.tabelaImovelTodos thead tr th {
+		color:rgb(53, 53, 53);
+		text-align:left;
+		padding-left:4px;
+		height:50px;
+	}
+	.celulaTabelaTIM {		
+		width: 100%;
+		height: 50px;
+		text-align:left;	
+		word-break: break-all;	
+		padding-left:4px;	
+	}
+
+	.tabelaImovelDash thead{
+		box-shadow:2px 5px 10px #a7a7a7;
+	}
+	.corpoTabelaTbody tr td {
+		width:10px;
+	}
+	.tituloTabelImovel {
+		
+		background-color: #f7f7f7;
+		text-align: left;
+		border:1px solid red;
+		/*border-top: 1px solid #b7b7b7;*/
+		/*border-bottom: 1px solid #b7b7b7;*/
+		font-size: 0.75rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		color:rgb(62, 62, 62);
+	}
+	.conteudoTdListaImovel {
+		font-size: 0.875rem;
+		width:50px;
+		height:30px;
+		border:1px solid blue;
+		/*border-top: 1px solid #e5e5e6;
+		border-bottom: 1px solid #e5e5e6;*/
+	}
+	.status {
+		padding:0.25rem 0.75rem;		
+		border-radius:0.25rem;
+	}
+	.statusV {
+		background-color:rgb(85, 194, 132);
+	}
+	.statusA {
+		background-color:rgb(220, 132, 132);
+	}
+	.contentorPaginacaoDash {		
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-top: 30px;
+	}
+	.listaPaginacaoDash {
+		display: flex;		
+	}
+	
+	.elementoEstPaginacao {
+		width: 30px;
+		height: 30px;
+		border-radius: 100%;
+		margin: 0px 4px;
+		font-size: 12px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+	.corNumeroPagina {
+		border:1px solid #bebec2;
+	}
+	.inicialPagina {
+		border: 1px solid #bebec2;
+	}
+	.corFinal {
+		background-color: var(--base-color);
+		color: white;
+	}
+	.hoverPagina:hover {
+		background-color: #bebec2;
+	}
+	.listaOpCRUD {
+		display: flex;
+	}
+	
+	.linkOpCRUD {
+		padding: 4px 8px;
+		background-color: #d5dff7;
+		border: 1px solid #d5dff7;
+		border-radius: 3px;
+		margin: 2px;
+		cursor: pointer;
+		color: var(--base-color);
+		cursor: pointer;
+	}
+	.linkOpCRUD:hover {
+		background-color: white;
+		box-shadow: 0px 0px 3px 0px black;
+		border: 1px solid white;
+	}
+	.contentorAcoes {
+		display: flex;
+		justify-content: space-between;
+		align-items:center;
+		width:100%;
+	}
+	.maisOp {
+		border: 1px solid #ddddde;
+		padding: 2px 6px;
+		border-radius: 4px;
+		cursor: pointer;
+		margin-left:8px;
+	}
+	.maisOp:active {
+		border: 1px solid white;
+		box-shadow: 0px 0px 3px 0px black;
+	}
+	.maisOp:hover {
+		border: 1px solid white;
+		box-shadow: 0px 0px 3px 0px black;
+	}
+	.maisOp div{
+		width: 4px;
+		height: 4px;
+		margin: 2px 0px;
+		border-radius: 100%;
+		background-color: #1c1c1c;
+	}
+
+
+
+/*================ Modal para o Imóvel ====================*/
+.fundoModalDash {
+	position: fixed;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.8);
+	width: 100vw;
+	height: 100vh;
+	z-index: 500;	
+	padding: 16px 0px;
+}
+.assumeModal {
+	width:100%;
+	height: 100%;	
+	display:flex;
+	justify-content:center;
+}
+.contentorMdodalImovelDash {
+	border-radius: 6px;
+	background-color: white;
+	width: 85%;
+}
+.divHeaderModalDash{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	padding-left: 15px;
+	border-bottom: 3px solid #b7b5b5;
+	margin-bottom: 0px;
+}
+.tituloModalDash {
+	font-size: 16px;
+	color: var(--subtitulo-solid);
+	font-weight: 600;
+}
+.btCloseModalDash {
+	height: 100%;
+	padding: 0px 16px;
+	font-size: 14px;
+	background-color: white;
+	border: 1px solid white;
+	outline: none;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.btCloseModalDash:active {
+	border: 1px solid var(--cor-base-secundaria);
+}
+.divBodyModalDash {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.divCorpoFoto {
+	width:98%;
+}
+.contentorModalDash {
+	width: 95%;
+	border:1px solid black;
+}
+.contentorTodosInputs {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 12px;
+	margin-bottom: 30px;
+}
+.contentorCaracteristica {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 12px;
+	margin-bottom: 30px;
+}
+.headerCamposImoveisDash {
+	margin-bottom: 20px;	
+}
+.contentorTagForm {
+	
+}
+.selectModalDash {
+	width: 100%;	
+	padding: 10px 0px;
+}
+.inputModalDash {
+	width: 100%;
+	padding: 8px;
+	border: 1.5px solid #c7c7c7;
+	border-radius: 2px;
+	outline: none;
+	font-size: 15px;
+	color: var(--cor-base-secundaria);
+}
+.inputModalDash:focus {
+	border: 1px solid var(--base-color);
+}
+
+
+
+.caixaFormIm-divLinkGeralIm {
+	position: relative;
+	margin: 2rem 0rem;
+}
+.caixaFormIm-divLinkGeralIm::before {
+	content: "1";
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: -30px;
+	left: 0;	
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: var(--base-color);
+	color: white;
+	font-family: 'DM sans', sans-serif;
+}
+
+.caixaFormIm-divLinkGeralIm::after {
+	content: "Geral";
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: -26px;
+	left: 50px;	
+	border-radius: 50%;
+	color: var(--base-color);
+	font-family: 'DM sans', sans-serif;
+}
+
+
+.caixaFormIm-divLinkCaracteIm {
+	position: relative;
+	margin: 2rem 0rem;
+}
+.caixaFormIm-divLinkCaracteIm::before {
+	content: "3";
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: -60px;
+	left: 0;	
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: var(--base-color);
+	color: white;
+	font-family: 'DM sans', sans-serif;
+}
+
+.caixaFormIm-divLinkCaracteIm::after {
+	content: "Caraterística";
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: -56px;
+	left: 50px;
+	border-radius: 50%;
+	color: var(--base-color);
+	font-family: 'DM sans', sans-serif;
+}
+
+
+.caixaFormIm-divLinkEnderecoIm {
+	position: relative;
+	margin: 4.75rem 0rem;
+}
+.caixaFormIm-divLinkEnderecoIm::before {
+	content: "2";
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: -70px;
+	left: 0;	
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: var(--base-color);
+	color: white;
+	font-family: 'DM sans', sans-serif;
+}
+.caixaFormIm-divLinkEnderecoIm::after {
+	content: "Endereço";
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: -66px;
+	left: 50px;
+	border-radius: 50%;
+	color: var(--base-color);
+	font-family: 'DM sans', sans-serif;
+}
+.caixaModalDash-btnAcoes{
+
+	margin-top: 2rem;
+}
+/*========== Campos do Imoveis ====>*/
+.especificaArea {
+	margin-bottom: 20px;
+}
+.descArea {
+	font-size: 12px;
+	position: relative;
+	display: block;
+	color: #001b2a;
+	text-transform: uppercase;
+}
+.bordaBottom {
+	display: block;
+	width: 3%;
+	margin-top: 2px;
+	position: absolute;
+	height: 2px;
+	background-color: var(--base-color);
+}
+.formDashImovel {
+	display: flex;
+	flex-direction: column;
+}
+
+.contentorBtAcoes {
+	margin-bottom: 30px;
+}
+.btModalImoveisDash {
+	padding: 8px 40px;
+	margin: 3px;
+	cursor: pointer;
+	font-size: 15px;
+}
+.btSalvarImovelDash, 
+.btAlterarImovelDash {
+	background-color: var(--base-color);
+	border: 1px solid var(--base-color);
+	color: white;
+	border-radius: 3px;
+	transition: all 0.2s;
+}
+.btCancelarImovelDash {
+	background-color: var(--cor-base-secundaria);
+	border: 1px solid var(--cor-base-secundaria);
+	color: white;
+	border-radius: 3px;
+	transition: all 0.2s;
+}
+.btCancelarImovelDash:hover {
+	background-color: white;
+	color: var(--cor-base-secundaria);	
+	border: 1px solid white;
+	box-shadow: 0px 0px 3px 0px black;
+}
+.btSalvarImovelDash:hover {
+	background-color: white;
+	color: var(--base-color);	
+	border: 1px solid white;
+	box-shadow: 0px 0px 3px 0px black;
+}
+.btAlterarImovelDash:hover {
+	background-color: white;
+	color: var(--base-color);	
+	border: 1px solid white;
+	box-shadow: 0px 0px 3px 0px black;
+}
+.btCancelarImovelDash:active {
+	background-color: var(--base-color-alt);
+}
+.btSalvarImovelDash:active {
+	background-color: var(--base-color-alt);
+}
+.btAlterarImovelDash:active {
+	background-color: #c0bcbc;
+}
+.activaModalSuprema {
+	visibility: visible;
+	opacity: 1;
+}
+.escondeModal {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.escondePainel {
+	display:none;
+}
+.disparar {
+	display:flex !important;
+} 
+
+
+/*========== Modal De foto ======== */
+.contentorGeralFoto {
+	background-color: white;
+	width: 60%;
+	flex-direction: column;
+	display: flex;
+	border-radius: 4px;
+}
+.divHeaderFoo {
+	height: 45px;
+	border-bottom: 1px solid #c6c4c4;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.caixaFoto {
+	
+}
+.contentorAba {
+	width: 100%;
+	padding-top: 20px;
+	display:block;
+}
+.elementoAbaFoto {
+	display: flex;
+	margin-bottom: 15px;
+}
+.abaFotoPrincipal {
+	border: none;
+	padding: 8px 28px;
+	background-color: white;
+	cursor: pointer;
+	position: relative;
+}
+.fotoActivo {
+	border-bottom: 1px solid var(--base-color);
+}
+.fotoInativo {
+	color: #d9d9d9;
+}
+.bordaFoto {
+	width: 50%;
+	position: absolute;
+	background-color: #028968;
+}
+.contentorPaineisFotosDash {
+	display: Flex;
+}
+.painelFoto {
+	width: 100%;	
+	background-color: white;
+}
+.painelFotoActivo {
+	display: block;
+}
+.divUploadComponentes {
+	display:flex;
+	justify-content:space-between;	
+}
+
+
+/*=== Componentes da div -> divUploadComponentes*/
+.contentorImagemUpload {
+	border-radius:4px;
+	background-color:rgb(201, 201, 201);
+	width:50%;	
+	height:200px;
+	margin-bottom:20px;
+}
+.divBtUploadBD {
+	width:40%;
+	display:flex;
+	flex-direction:row;
+	align-items:flex-end;
+	padding-bottom:20px;
+}
+
+
+.painelFotoInativo {
+	display: none;
+}
+.contentorInputIMG {
+	width: 100%;
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	grid-gap:0px 10px;
+}
+
+
+
+.imgElementoComum {
+	width: 100%;
+	height: 330px;
+}
+.recebeIMG {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.seguraIMG {
+	width: 80%;
+	height: 300px;
+	border-radius: 16px;
+	text-align: center;
+	border-radius: ;
+}
+.seguraIMG img {
+	width: 100%;
+	height: 100%;
+	border-radius: 16px;
+}
+.fileArquivo {
+	background-color: #0d9c68;
+	padding: 8px 12px;
+	cursor: pointer;
+	margin-top: 4px;
+	color: white;
+	border-radius: 3px;
+	border: 1px solid #0d9c68;
+}
+.fileArquivo:hover {
+	background-color: white;
+	color: #0d9c68;
+	border: 1px solid white;
+	box-shadow: 0px 0px 3px 0px black;
+}
+.divContentorImg {
+	width: 100%;
+	padding-top: 30px;
+}
+.formImg {
+	width: 100%;
+}
+.divAcoesImg {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.divAcoesImg ul {
+	margin-top: 30px;
+	width: 50%;
+}
+.btAcoesFoto{
+	padding: 10px 40px;
+	background-color: #b0c1f7;
+	margin: 10px 0px;
+	display: block;
+	cursor: pointer;
+	text-align: left;
+	border-radius: 3px;
+	color: var(--base-color);
+	border: 1px solid #b0c1f7;
+}
+
+.btAcoesFoto:hover{
+	background-color: white;
+	box-shadow: 0px 0px 3px 0px black;
+	border: 1px solid white;
+	color: var(--base-color);
+}
+
+
+/*======================= CLASSE DA FUNCIONALIDADE DO LINK MENU ===============================*/
+.pilotar {
+	background-color:#8993c2;
+}
+
+
+
+
+/* === Classe para desligar todos paineis após a tela for carregada ====*/
+.desligaPainel {
+	display:none;
+}
+
+/* ==== Classe para complementar todos os paineis secundários ==== */
+.painelSecundario {
+	justify-content: center;
+	padding: 4px 0px;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+/* ===== Classe para complementar o painel inicial do Dashboard ====== */
+.painelIncial {
+	flex-direction:column;
+	height: 100%;
+	position: relative;
+}
+.painelInicial::scrollbar {
+	visibility: visible;
+}
+/* === Classe para mostrar todos os paineis ====*/
+.ligaPainel {
+	width: 100%;
+	display:flex;
+}
+
+
+
+
+
+
+
+/*===================== Formatação do campo de alteração =====================*/
+
+.ct-Alterar {
+	position: absolute;
+	top: 42px;
+	right: 0;
+	background-color: white;
+	width: 390px;
+	height: 90vh;
+	z-index: 2;
+	border: 1px solid white;
+	box-shadow: 0px 0px 5px #757575;
+	transition: 0.5s;
+}
+
+.leva-para-fora {
+	transform: translateX(110%);
+}
+.linha-Alterar-1  {
+	display: flex;
+	flex-direction: column;	
+	width: 100%;
+}
+.hd-alterar-dados {
+	width: 100%;
+	height: 100px;
+	background-color: #d7d7d7;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+
+/*========= Formatando o botão voltar para tabela ======*/
+.link-back-table {
+	width:  35px;
+	height: 35px;
+	display: bolck;
+	border: 1px solid #e4e4e4;
+	background-color: #e4e4e4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transform: translateX(-50%);
+	margin-top: 10px;
+}
+.link-back-table:hover {
+	background-color: #2f2f2f;
+	color: white;
+}
+.link-back-table i {
+
+	font-size: 14px;
+	cursor: pointer;
+	transform: rotate(180deg);
+}
+
+
+
+/*========= Formatando o botão voltar para tabela ======*/
+.cp-header {
+	display: flex;
+	padding-left: 20px;
+}
+
+.ct-image-dados {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+}
+
+.ct-image-dados img {
+	border-radius: 50%;
+	object-fit: cover;
+}
+.inf-resumida-dados {
+	display: flex;	
+	padding-left: 10px;
+}
+.nome-dados-selecionado {
+	font-size: 18px;
+	color: #161616;
+}
+.categoria-dados-selecionado {
+	font-size: 14px;
+	color: #5a5858;
+}
+
+
+/*============================= Formatação dos elementos do body da div de alteração =============================*/
+
+
+
+.form-alt-da {
+	padding-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+.cp-inputs-alt {
+	display: grid;
+	padding: 0px 4px ;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px 10px;
+}
+
+.cp-inputs-alt-tipoFun {
+	display: grid;
+	padding: 0px 4px;
+	grid-template-columns: 1fr;
+	grid-gap: 20px 10px;
+}
+
+.cp-grandeInput  {
+	width: 100%;
+}
+.labelRadioFun {
+
+	font-size: 14px;
+	color: #1b1b1b;
+	margin-left: 5px;
+	cursor: pointer;
+
+}
+.divFlex {
+	display: flex;
+}
+.ct-radio {
+
+	display: flex;
+	margin: 0px 4px;
+	align-items: center;
+}
+
+.config-user {
+	margin-top: 16px;
+	border-top: 3px solid #dadada;
+	padding-top: 5px;
+}
+.cp-bottons-alt {
+	padding-top: 8px;
+	margin-top: 12px;
+	display: flex;
+	justify-content: flex-end;
+}
+.esconde {
+	display: none;
+}
+.dadosUtilizador {
+    display: grid !important;
+    animation: fadeInput 1s ease;
+}
+
+@keyframes fadeInput {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.leva-para-dentro {
+	transform: translateX(0%) !important;
+}
+.meMostraModal {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+/*================== Trabalhando somente para a modal Funcionário ===================*/
+
+.contentorMdodalFunDash {
+	border-radius: 6px;
+	background-color: white;
+	width: 70%;
+}
+.contentorMdodalUserDash {
+	border-radius: 6px;
+	background-color: white;
+	width: 50%;
+	height: 200px;
+}
+.contentorMdodalTiposDash {
+	border-radius: 6px;
+	background-color: white;
+	width: 35%;
+	height: 100px;
+}
+.divRadioCadFun {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.cp-radios-primario {
+	display: flex;
+	padding-top: 10px;
+}
+.divRadioCadFun div {
+	margin: 0px 10px;
+}
+.label-radio-cad-fun {
+	font-size: 15px;
+	color: #1f1f1f;
+	cursor: pointer;
+}
+.inputRadioCadFun {
+	cursor: pointer;
+}
+.ct-btn-cad-fun {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 40px;
+}
+
+
+
+
+/*================= Formatando elemento do painel Ulitilizador ==========*/
+
+.alt-user {
+	margin-top: 120px;
+}
+
+.alt-user-painel {
+	display: grid;
+	padding: 15px 15px;
+	grid-template-columns: 1fr;
+	grid-gap: 30px 15px;
+}
+
+.abaPesquisaDash {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	align-items: flex-end;
+}
+
+.pesquisaPainelDash {
+	
+	width: 100%;
+	border: 1px solid #e3e0e0;
+	background-color: #e3e0e0;
+	padding: 6px 0px 6px 6px;
+	font-size: 15px;
+	color: #1c1e1d;
+	border-radius: 4px;
+	outline: none;
+	transition: .2s;
+}
+
+.pesquisaPainelDash:focus  {
+	border: 1px solid #0a4a9a;
+}
+
+.cp-tipoFun {
+	display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+	margin-top: -20px;
+}
+
+.divTituloAltTipoFun {
+	width: 100%;
+	padding: 10px;
+}
+
+
+
+.textoTituloTipoFun {
+	font-size: 20px;
+	color: #232323;
+	font-weight: 500;
+}
+.textoAlteracao {
+	font-size: 	14px;
+	color: #343434;
+	font-weight: 500;
+}
+
+.separaTipoFun {
+	margin-left: 12px;
+}
+
+.mainPainelImovelDash {
+	width: 100%;
+	height: 100%;
+	padding-top: 2rem;	
+}
+
+
+
+.tabela-a {
+	width: 100%;	
+	display: flex;
+	justify-content: center;
+	
+	
+}
+.tabela-b {
+	width: 100%;
+	letter-spacing: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 1rem 1rem;
+	overflow-x: auto;
+}
+
+.tabela_ingles {
+	border-collapse: collapse;
+	box-shadow: 0 5px 10px #a1a1a1;
+	background-color: white;
+	text-align: left;
+	overflow-x: auto;
+}
+
+.tabela_ingles thead {
+	box-shadow: 0 5px 10px #a1a1a1;
+}
+.tabela_ingles thead th {
+	padding: 1rem 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rerm;
+	font-size: 0.7rem;
+	font-weight: 900;
+	color: #1d1c1c;
+
+	font-weight: 500;
+}
+.tabela_ingles tbody td {
+	padding: 1rem 2rem;
+}
+
+table.tabela_ingles tbody tr:nth-child(even){
+	background-color:rgb(230, 227, 227);
+}

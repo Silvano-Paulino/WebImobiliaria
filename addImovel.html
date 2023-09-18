@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <!-- Informações da página -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>
+        Paracletors - Adiciona o seu imóvel
+    </title>
+
+    <!--Cascating Style Sheet-->
+    <link rel="stylesheet"  href="css/estilo.css" />    
+    <script src="js/jquery-3.3.1.js"  ></script>
+
+</head>
+<body>
+    <!--Início da estrutura do documento html-->
+
+
+
+
+    <!--Início da estrutura semântica do html:-->
+
+    <header id="header" ><!--Início do cabeçalho da página-->
+
+        <div class="contentorGeral cabecalho" >            
+
+                <!--MENU* -->
+                    <div class="contentorMenu" >
+                        
+                        
+                            <!--Área da informação do site e motores de busca-->
+                            <div class="inforMenu elementoMenu " >
+                                <div class="campoInfor limite" >
+                                    <div class="conteinerInforMenu elementoMenu" >
+
+                                        <div class="contentorContacto" >
+                                            
+                                            <div class="componenteInfor inforEmail" >
+                                                <i class="fa fa-envelope-o elementoContacto iconeContacto"></i>
+                                                 <span class="elementoContacto" > paracletors@gmail.com</span>                                           
+                                            </div>
+                                            <div class="componenteInfor inforTelefone" >
+                                                <i class="fa fa-phone elementoContacto iconeContacto"></i>
+                                                 <span class="elementoContacto" >+244 999 999 999</span> 
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="inforBusca" >
+
+                                        <div class="contentorBusca elementoBusca"  >
+                                            <form method="" action="" class="formularioBuscador" >
+                                                <input typ="text" name="buscadorGeral" class="inputBuscador componenteBusca" placeholder="Buscar Imóvel" >
+                                                <button class="fa fa-search componenteBusca btBusca" ></button>
+                                            </form>
+                                        </div>
+
+                                        <div class="componenteMidia elementoBusca" >
+                                            <a class="fundo" href="#" ><i class="fa fa-twitter" ></i></a>
+                                            <a class="fundo" href="#" ><i class="fa fa-facebook" ></i></a>
+                                            <a class="fundo" href="#" ><i class="fa fa-whatsapp" ></i></a>
+                                            <a class="fundo" href="#" ><i class="fa fa-linkedin" ></i></a>
+                                            <a class="fundo" href="#" ><i class="fa fa-instagram" ></i></a>                                           
+                                         </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--Área da Navegação do site -->
+                            <div class="navegaMenu elementoMenu " >
+                                <div class="campoNavegar limite">
+                                    <div class="contentorNavegar" >
+                                        <!--Logo-->
+                                        <div class="contentorLogotipo elementoNavegacao divNavega" >                                            
+                                            <div class="contentorImg" >
+                                                <img src="img/logo.png" >
+                                            </div>
+                                            <div class="contentorTextoLogo" >
+                                                <span class="textoInteiro" >paraclet<span class="parteTexto" >ors</span></span>
+                                            </div>
+                                        </div>
+                                        <!--Nav-->
+                                        <div class="contentorNav elementoNavegacao divNavega" >
+                                            <nav class="nav" >
+                                                <ul class="listaMenu" >
+                                                    <li class="le"><a class="active linkMenu">Página inicial</a></li>
+                                                    <li><a class="linkMenu temSubmenu" id="subLista" >Venda <i class="fa fa-caret-down iconeMenu" ></i></a>
+                                                        <ul class="subMenu" id="subMenuVenda" >  
+                                                            <li><a class="itemSubMenu" >Novos Imóveis</a></li>
+                                                            <li><a class="itemSubMenu" >Em destaques</a></li>
+                                                            <li><a class="itemSubMenu" >Mais popular</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a class="linkMenu" id="subListaCompra" >Compra <i class="fa fa-caret-down iconeMenu" ></i></a>
+                                                        <ul class="subMenu" id="subMenuCompra" >  
+                                                            <li><a class="itemSubMenu" >Novos Imóveis</a></li>
+                                                            <li><a class="itemSubMenu" >Em destaques</a></li>
+                                                            <li><a class="itemSubMenu" >Mais popular</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a class="linkMenu" >Todos Imóveis</a></li>
+                                                    <li><a class="linkMenu" >Serviços</a></li>
+                                                    <li><a class="linkMenu" >Sobre</a></li>
+                                                    <li><a class="linkMenu" >Contacto</a></li>    
+                                                    <li><a class="btLogin" href="Tela_login.php" >Login</a></li>                                                  
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                    </div>
+                <!--*MENU-->
+
+
+            </div>
+
+    </header>
+
+    <!-- Fim do cabeçalho da página -->
+
+
+
+    <!-- Início da publicação do imóvel pelo cliente -->
+
+    <div class="contentorInicialPubImovel" >
+
+        <!-- Alinhamento dos contentores no site -->
+        <div class="linhaPublicaImovel limite" >
+
+            <!-- header da área de Publicação do imóvel -->
+            <div class="headerPublicaImovelAdd" >
+                <div class="linhaAddImovel " >
+                    <div class="linhaEnderecoPosicao" >
+                        <a href="#" class="enderecoOrigem" >Home</a> <a class="enderecoPosicionado" > / Adicione seu imóvel </a>
+                    </div>
+                    <div class="tituloHeader" >
+                        <h2 class="tituloHome" >
+                            Adicione aqui a sua propriedade
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- body da área de Publicação do imóvel -->            
+            
+            
+            <!-- Área para selecionar um plano de Prestação de serviço -->
+            <div class="tabelaPacotePreco" >
+                <div class="contentorPacoteAdd" >
+                    <table class="tabelaPrecoPacote" >
+                        <tbody>
+                            <tr>
+                                <th rowspan="2" class="tituloTabela" >Teu Plano: </th>
+                                <td class="planosAdd" >Gratis</td>
+                                <td class="planosAdd" >Prata</td>
+                                <td class="planosAdd" >Ouro</td>
+                            </tr>
+
+                            <tr>
+                                <td class="precoAdd" >AOA 0</td>
+                                <td class="precoAdd" >AOA 50.000</td>
+                                <td class="precoAdd" >AOA 100.000</td>
+                            </tr>
+                        </tbody>
+                            
+                        <tbody class="corpoTBAdd" >
+                            <tr>
+                                <td class="conteudoTbAdd " ><div class="aquiMarginLeft divTd bordaTb" >Limite de cadastramento de imóvel</div></td>
+                                <td class="conteudoTbAddC " ><div class="bordaTb divTd" >1</div></td>
+                                <td class="conteudoTbAddC " ><div class="bordaTb divTd" >20</div></td>
+                                <td class="conteudoTbAddC " ><div class="aquiMarginRight divTd bordaTb" >Ilimitado</div></td>
+                            </tr>
+                            <tr>
+                                <td class="conteudoTbAdd " ><div class="aquiMarginLeft divTdE " >Quantidade de Corretor sob o imóvel</div></td>
+                                <td class="conteudoTbAddC " ><div class=" divTdE" >1</div></td>
+                                <td class="conteudoTbAddC " ><div class=" divTdE" >10</div></td>
+                                <td class="conteudoTbAddC " ><div class="aquiMarginRight divTdE " >Ilimitado</div></td>
+                            </tr>
+                            <tr>
+                                <td class="conteudoTbAdd " ><div class="aquiMarginLeft divTd bordaTb" >Agências afliais sobre o imóvel</div></td>
+                                <td class="conteudoTbAddC " ><div class="bordaTb divTd" >x</div></td>
+                                <td class="conteudoTbAddC " ><div class="bordaTb divTd" >5</div></td>
+                                <td class="conteudoTbAddC " ><div class="aquiMarginRight divTd bordaTb" >Ilimitado</div></td>
+                            </tr>
+                             <tr>
+                                <td class="conteudoTbAdd " ><div class="aquiMarginLeft divTdE">Publicação do imóvel</div></td>
+                                <td class="conteudoTbAddC " ><div class=" divTdE" >x</div></td>
+                                <td class="conteudoTbAddC " ><div class=" divTdE" ><i class="fa fa-check" ></i></div></td>
+                                <td class="conteudoTbAddC " ><div class="aquiMarginRight divTdE" ><i class="fa fa-check" ></i></div></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3" ></td>
+                                <td class="selectPacote">
+                                   
+                                    <div class="divRadioPacote " >
+                                        <input type="radio" name="pacote" value="8" id="radioPacoteGratis"  >
+                                        <label for="radioPacoteGratis" >
+                                           Selecionar
+                                        </label>
+                                    </div>
+
+                                </td>
+                                <td class="selectPacote" >
+
+                                 <div class="divRadioPacote" >
+                                        <input type="radio" name="pacote" value="8" id="radioPacotePrata"  >
+                                        <label for="radioPacotePrata" >
+                                           Selecionar
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="selectPacote" >
+                                     <div class="divRadioPacote" >
+                                        <input type="radio" name="pacote" value="8" id="radioPacoteOuro"  >
+                                         <label for="radioPacoteOuro" >
+                                           Selecionar
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="instrucaoPacote instrucao">
+                    <div class="divIntruirAddHouse">
+                        <div class="divNumeroPasso" >
+                            <a class="passo1" >1</a>
+                        </div>
+                        <div class="" >
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Área para inserir as informações básicas do imóvel  -->
+            <div class="" >
+                <div class="" >
+                    
+                </div>
+            </div>
+
+
+
+            <!-- Área para definir as características e  localização do imóvel  -->
+            <div class="" >
+                <div class="" >
+                    
+                </div>
+            </div>
+
+
+            <!-- Área para definir as imagens do imóvel a ser cadastrado  -->
+            <div class=""  >
+                <div class="" >
+                    
+                </div>
+            </div>
+
+
+
+             <!-- Área de itens que o imóvel possui  -->
+            <div class=""  >
+                <div class="" >
+                    
+                </div>
+            </div>
+
+
+
+             <!-- Área a forma de pagamento com a imobiliária  -->
+            <div class=""  >
+                <div class="" >
+                    
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Fim da publicação do imóvel pelo cliente -->
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer id="footer" ><!--Início do rodapé da página-->
+        <div class="contentorGeralFooter">
+            <div class="divFooter limite" >
+                <div class="conteudoFooter divElementoRodape1" >
+                    <div class="conteudoMaisImovel" >
+                        <ul class="listaAdd" >
+                            <li> <a class="linkAddImovel" href="#" > <i class="fa fa-plus iconeAddImovel " ></i> Adicionar Propriedade</a></li>
+                            <li><span class="incrementoLinkAdd" > - mais imóveis para Paracletors </span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="conteudoFooter divElementoRodape2" >
+                    <div class="contentorListaMenuRodape" >
+                        <div class="listaRodape1 listaRodapeGeral" > 
+                            <h3 class="tituloMenuRodape" >
+                                Empresa
+                            </h3>
+                             <ul class="listaRodapeMenu" >                                
+                                 <li><a class="linkMenuRodape" >Sobre</a></li>
+                                 <li><a class="linkMenuRodape" >Contacto</a></li>
+                                 <li><a class="linkMenuRodape" >Recrutamanto</a></li>
+                                 <li><a class="linkMenuRodape" >Corretores</a></li>
+                             </ul>
+                        </div>
+                        <div class="listaRodape2 listaRodapeGeral" > 
+                            <h3 class="tituloMenuRodape"  >
+                                Nossas Propriedades
+                            </h3>
+                             <ul class="listaRodapeMenu" >                                
+                                 <li><a class="linkMenuRodape" >Apartamentos</a></li>
+                                 <li><a class="linkMenuRodape"  >Casas</a></li>
+                                 <li><a class="linkMenuRodape"  >Condominio</a></li>
+                                 <li><a class="linkMenuRodape"  >Mansão</a></li>
+                             </ul>
+                        </div>
+                        <div class="listaRodape3 listaRodapeGeral" > 
+                            <h3 class="tituloMenuRodape"  >
+                                Fale Conosco
+                            </h3>
+                             <ul class="listaRodapeMenu" >                                
+                                 <li><a class="linkMenuRodape"  >Bairro Bie, Patriota, Talatona</a></li>
+                                 <li><a class="linkMenuRodape"  >952 156 937 / 925 215 742</a></li>
+                                 <li><a class="linkMenuRodape"  >paracletorsservico@gmail.com</a></li>
+                             </ul>
+
+                             <div class="divNewsletter" >
+                                  <h3 class="tituloMenuRodape" >NEWSLESTTER</h3>
+                                  <p class="paragrafoNewsletter" >Fica ligado dos nossos novos imóveis inscrevendo com o seu email na nossa newsletter</p>
+                                  <form class="formularioNewsletter" >
+                                      <input type="email" name="emailNewsletter" class="inputEmailNewsletter" Placeholder="Informa aqui o seu Email" />
+                                      <button class="btNewsletter" >Ok</button>
+                                  </form>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="conteudoFooter divElementoRodape3" >
+                    <h2 class="tituloSite" name="nomeSite" >Paracletors</h2>
+
+                    <div class="contentorConteudoFooter " >
+                        <div class="divRodapeSobre" >
+                            <p>Copy Right Paracletors 2022, este site tem os direitos reservados pela Paracletors</p>
+                        </div>
+                        <div class="divRodapeSobre" >
+                            <a class="fundoFooter" href="#" ><i class="fa fa-twitter" ></i></a>
+                            <a class="fundoFooter" href="#" ><i class="fa fa-facebook" ></i></a>
+                            <a class="fundoFooter" href="#" ><i class="fa fa-whatsapp" ></i></a>
+                            <a class="fundoFooter" href="#" ><i class="fa fa-linkedin" ></i></a>
+                            <a class="fundoFooter" href="#" ><i class="fa fa-instagram" ></i></a>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!--Fim do rodapé da página-->
+
+    <!--Fim da estrutura semântica do html-->
+
+
+    <!--Importação do Script -->
+
+    <script src="js/app.js" ></script>   
+    <script src="js/script.js"  ></script>
+</body>
+</html>

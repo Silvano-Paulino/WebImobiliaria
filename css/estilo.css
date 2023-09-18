@@ -1,0 +1,1853 @@
+/*========== Importação de css externos =========*/
+@import url(font-awesome.css);
+@import url(font-awesome.min.css);
+@import url(sliders.css);
+@import url(admin.css);
+@import url(login.css);
+@import url(modal.css);
+@import url(corretor.css);
+
+/* RESET */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+img {
+    width:100%;
+    height:100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.vida  {
+    background-color: blue;
+}
+
+
+/*============== Variáveis ===============*/
+:root {
+    --hue: 223;
+    /*Cores HSL*/
+    --base-color: hsl(var(--hue) 97% 56%);    
+    --background-Dash: hsl(var(--hue) 1% 77%);
+    --base-color-alt: hsl(var(--hue) 70% 82%);
+    --base-title: hsl(var(--hue) 100% 12%);
+    --subtitulo-solid:hsl(var(--hue) 0% 24%);
+    --text-color: hsl(var(--hue) 0% 43%);
+    --link-color: hsl(var(--hue) 90% 86%);
+    --text-color-second: hsl(0% 0% 35%);
+    --conteiner-background: hsl(var(--hue) 2% 95%);
+    --border-bottom: hsl(var(--hue) 0% 76%);
+    --cor-base-secundaria: hsl(var(--hue) 0% 21%);
+}
+
+/*==================== Base ==================*/
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    font: 400 1rem 'DM sans', sans-serif !important;
+    color: var(--text-color) !important;
+    -webkit-font-smoothing: antialiased !important;
+    overflow: auto;
+}
+#bodyCentral{
+
+    overflow: hidden;
+}
+
+h1 {
+    font: 700 1.875rem "Poppins", sans-serif;
+    color: var(--base-title);
+    -webkit-font-smoothing: auto;
+    overflow: hidden;
+}
+
+ #main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+ 
+#header {
+    /*overflow: hidden;*/
+}
+/*============= Início da formatação do cabeçalho ==============*/
+
+
+.contentorMenu {
+    height:130px;
+}
+
+.limite {
+    width:85%;
+    height:100%;
+}
+
+.casa{
+    background-color: blue;
+}
+
+    /*============ MENU -> ============*/
+
+        .inforMenu {            
+            height:40px;  
+            background-color: var(--conteiner-background);
+            border-bottom:1px solid var(--border-bottom);
+        } 
+        .navegaMenu {
+            height:100%;         
+        }
+
+        .elementoMenu {
+            width:100%;
+            display:flex;
+            justify-content:center;
+        }
+
+        .campoInfor  {
+            display:flex;       
+        }
+
+        /*==== Início da formatação da área de informação do Menu*/        
+        
+        .contentorContacto {
+            height:100%;
+            display:flex;
+            align-items:center;            
+        }
+        
+        .conteinerInforMenu {                                        
+            display:flex;            
+            align-items:center;
+            justify-content: space-between;
+            height:100%;
+        }
+
+        /*===== Formatando Contacto =>*/
+        .componenteInfor {
+            display:flex;
+            align-items:center;
+            height:100%;
+        }
+        .inforContacto {
+            display:flex; 
+            height:100%;           
+        }
+        .inforTelefone {
+            margin-left: 1.875rem;
+        }
+        .elementoContacto {
+            font-size: 0.875rem;
+        }
+        .iconeContacto {
+            padding:0.1875rem 0.25rem;
+            background-color: var(--border-bottom);
+            color:var(--base-color);
+            margin-right:0.1875rem;
+        }
+
+        /*====== Formatando Buscador  =>*/
+        .inforBusca {
+            height:100%;            
+            display:flex;            
+        }
+        
+        .contentorBusca {
+            height:100%;      
+            margin-right:2.5rem;    
+        }
+
+        .formularioBuscador {
+            display:flex;
+            align-items:center;
+            height:100%;
+            
+        }
+
+        .inputBuscador {
+            padding:0.125rem 0rem 0.125rem 0.5rem;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+            font-family:'DM sans', sans-serif;            
+        }
+
+        .inputBuscador:hover {
+            /*width:200px;
+            transition: all 10s ease;*/ /*Estamos a espera do código de efeito para input*/
+        }
+        .componenteBusca {
+            background-color: var(--border-bottom);
+            border:none;
+            outline:none;
+            height:80%;
+            font-size:0.875rem;
+        }
+        .btBusca {
+            padding:0rem 0.375rem 0rem 0.375rem;
+            border-top-right-radius:2px;
+            border-bottom-right-radius: 2px;
+            color:var(--base-color);            
+        }
+        .btBusca:active {
+            border:1px solid var(--base-title);
+        }
+
+        /*=========== Formatando links das mídias socias => */
+        .componenteMidia {            
+            display:flex;
+            align-items:center;
+        }
+        .fundo {
+            font-size:0.8125rem;            
+            padding:0.125rem 0.375rem; 
+            background-color: var(--cor-base-secundaria);
+            margin:0.125rem 0.25rem;
+            border-radius:4px;
+            color:#fff;
+        }
+
+
+
+        /*===========  FORMATAÇÃO DA NAVEGAÇÃO ==>*/
+        .navegaMenu {
+            height:90px;
+            position: relative;
+        }
+        .campoNavegar {
+            height:100%;        
+        }
+       .contentorNavegar {
+           display:flex;
+           justify-content: space-between;
+           height:100%;
+       }        
+       .divNavega {
+           display:flex;
+           align-items:center;
+       }           
+        /*================== Formatando a logo do site ==>*/
+        .elementoNavegacao {
+
+        }
+        .contentorLogotipo {
+            display:flex;
+            height:100%;
+        }
+        .contentorImg {
+            width:90px;
+            height:50px;
+            margin-top:-10px;
+        }
+        .textoInteiro {
+            font-size:1.25rem;
+            font-family:'Poppins', sans-serif;
+            margin-left:6px;
+            color:var(--cor-base-secundaria);       
+        }
+        .parteTexto {
+            color:var(--base-color);
+        }
+        /*================ Formatando os elemento da nav ==>*/
+        .listaMenu {
+            display:flex;
+            list-style:none;
+            position:relative;
+        }
+        
+        .active {
+            color:var(--cor-base-secundaria);
+        }
+        .linkMenu {
+            padding:0px 20px 2px 0px;
+            position:relative;
+            margin:0px 2px;
+            cursor:pointer;
+        }
+        .linkMenu:hover {
+            color:var(--cor-base-secundaria);
+        }
+
+        .linkMenu::after {
+            content:" ";
+            bottom:0;
+            left:0;
+            width:0%;
+            height:2px;
+            position:absolute;
+            background-color:var(--base-color);
+            border-radius:3px;
+            transition: 0.5s ease-in-out;
+        }
+        
+       .linkMenu:hover::after{
+            width:100%;
+        }
+        .iconeMenu {
+            color:var(--base-color);
+            font-size:12px;
+        }
+        .btLogin {
+            padding:6px 26px;
+            background-color:var(--base-color-alt);
+            color:var(--base-color);
+            border-radius:2px;
+            cursor:pointer;
+            transition: 0.6s ease;
+        }
+        .btLogin:hover {
+            background-color:var(--base-color);
+            color:white;            
+        } 
+
+
+
+        /*=============== SubMenus do site ===> */
+        .temSubMenu {
+            position:relative;
+        }
+
+        .subMenu {       
+            display:none;        
+            position:absolute;
+            z-index:2;
+            background-color:#e8e8e8;
+            margin-top:15px;
+            list-style:none;            
+            flex-direction:column;
+            border:1px solid white;     
+            box-shadow:0px 0px 1px 0px black;
+            border-radius:2px;
+        }
+
+        .subMenu:before {
+            position:absolute;
+            content:"";
+            height:16px;
+            width:16px;
+            margin:0px;
+            left:20px;
+            top:-9px;
+            background-color:#e8e8e8;
+            transform:rotate(45deg);
+        }
+        .itemSubMenu {
+            display:block;
+            padding:8px 130px 8px 6px;
+            cursor:pointer;
+            border-bottom:1px solid #bcbcbc;
+            transition: 0.4s ease;
+        }
+
+        .itemSubMenu:hover  {
+            color:var(--cor-base-secundaria);            
+        }
+
+        .menuActivo {
+            display: flex;
+        }
+
+    /*============ <- MENU ============*/
+
+
+    /*============ <'-- Buscador de Imóveis =============*/
+        /*=====> Somente conteiners ==>*/
+.buscadoImoveis {
+    background-color:var(--conteiner-background);
+    padding:16px;
+    width:100%;
+}
+
+.contentorBuscaImovel {
+    display: flex;
+    justify-content: center;
+}
+
+.contentorFormBusca {
+   background-color:white;
+   padding:8px;
+}
+
+.formBuscaImovel {
+    display:flex;
+    justify-content:space-around;
+    align-items:center; 
+    padding:8px 0px;
+}
+
+.contentorElementoForm {    
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    width: 250px;
+    height: 59px;
+    margin: 0px 6px;
+    position: relative;
+
+}
+
+.inputHome {
+    width: 100%;
+    padding: 7px 6px;
+    font-size: 14px;
+    font-family: 'DM sans', sans-serif;
+    background-color: white;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid #585858;
+}
+
+.inputHome:focus {
+    border: 1px solid var(--base-color);
+}
+
+.selectBusca {
+    background-color: white;
+    border: 1px solid #585858;
+    width: 100%;
+    padding: 7px 6px;
+    border-radius: 3px;
+}
+
+.btPesquisaImovel {
+    border: 1px solid var(--base-color);
+    background-color: var(--base-color);
+    color: White;
+    outline: none;
+    padding: 8px 18px;
+    cursor: pointer;
+}
+
+.btPesquisaImovel:hover  {
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px black;
+    border: 1px solid white;
+    color: var(--base-color);
+}
+
+/*============= Fim da formatação do cabeçalho ==============*/
+
+
+
+
+
+
+
+/*===================== Início da formatação do corpo Central da Página inicial ===============================*/
+    /*========== Início da Divulgação dos Imóves =========>*/
+    /*====== SÓ Conteiner ====*/
+    .corpoCentral {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .divulgacaoImovel {
+        display: flex;
+        justify-content: center;
+        flex-direction:column;
+        margin-top:100px;  
+        padding-bottom: 90px;     
+    }
+
+    .ele {
+        
+    }
+
+    .contentorImovelVenda {
+        /*position: Relative;*/
+    }
+
+    .imovelVenda {
+        
+    }
+
+    .cabecalhoDivulgacao {
+        display: flex;
+        justify-content: center;
+    }
+
+    .divConteudoCabecalho {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: Center;
+    }
+    .divConteudoCabecalho p {
+        text-align: center;
+    }
+
+    .tituloHome {
+        font-size: 28px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        color: var(--base-title);
+        text-align: center;
+    }
+
+    .menuSection {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .listaMenuSectionD {
+        display: flex;   
+    }  
+
+    .linkImovelD {        
+        display: block;
+        font-size: 15px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .linkImovelD:hover {        
+        color: var(--base-color);
+    }
+
+    .linkImovelD::after {        
+        content:"";
+        position: absolute;
+        bottom: -20%;
+        left: -3%;
+        width: 0%;
+        height: 1px;
+        background-color: var(--base-color);
+        border-radius: 30px;
+        transition: width 0.8s ease;
+    }
+
+    .linkImovelD.activeImvelD::after{
+        width: 104%;        
+    }
+
+    .colorLink {
+        color: #024b79;
+    }
+
+    .espD1 {
+        padding-right: 16px;
+    }
+
+    .espD {
+        padding: 0px 16px;
+    }
+
+   .seeAllImovel {
+        font-size: 14px;
+        color: var(--base-color);
+        cursor: pointer;
+   }
+
+   .seeAllImovel:hover i {
+        padding-left: 20px;
+        transition: padding-left 0.9s ease-in-out;
+   }
+
+    .corpoDivulgacao {
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .conteudoSection {
+        /*position: relative !important;*/
+    }
+
+    .contentorCardImovelD {
+        position: relative;
+        margin-top: 30px;
+        top: 0;
+        left: 0;
+        display: none;        
+        border-radius: 3px;        
+        width: 100%;
+    }
+
+    .contentorCardImovelD.acitveCardImovelD {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 0px 20px;
+        width: 100%;
+        animation: fade 1s ease;
+    }
+
+    .cardImovelD {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 3px 0px black;
+        border: 1px solid white;
+        border-radius: 3px;
+    }
+
+    .espCardImove {
+        margin: 0px 16px;
+    }
+
+    /*==== Início da animação para trocar de Categoria de Imovel ===*/
+    @keyframes fade {
+        from{
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+}
+
+
+
+
+/*================== DIVULGAÇÃO DOS IMÓVEIS ==================*/
+
+/*======= Contentores =======*/
+.cardImovelD {
+    width: 270px;
+}
+
+.linkImovelD {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cabecalhoCardD {
+    position: relative;
+}
+
+.contentorImgImovel {
+    height: 190px;
+}
+
+.contentorImgImovel img.imgImovelD  {
+    border-radius: 4px;
+}
+
+.contentorImgCorretorResp {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+    right: 20px;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+.contentorImgCorretorResp img {
+    border-radius: 100%;
+}
+
+.contentorEtiqueta {
+    position: absolute;
+    padding: 1px 30px;
+    font-size: 14px;
+    top: 20px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    left: 0;
+    color: white;
+    background-color: var(--base-color);
+    border: 1px solid var(--base-color);
+}
+
+.contentorEtiquetaAl {
+    position: absolute;
+    padding: 1px 30px;
+    font-size: 14px;
+    top: 20px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    left: 0;
+    color: white;
+    background-color: #219166;
+    border: 1px solid #219166;
+}
+
+.corpoCardD {
+    margin-top: 30px; 
+    padding: 0px 8px; 
+}
+
+.contentorTituloImovel h3 {
+    font-size: 18px;
+    color: var(--base-title);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.enderecoImovel {
+    margin-bottom: 30px;
+}
+
+.enderecoImovel p {
+    color: #9d9b9b; 
+    font-size: 13px;
+}
+
+.listaCaracteristicaImovel {
+    display: flex;
+    justify-content: space-around;
+}
+
+.elementoListCarcImovel {
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+    align-items: center;
+    color: #9d9b9b;
+}
+
+.rodapeCardD {
+    padding: 16px 8px;
+    margin-top: px;
+    border-top: 1px solid #9d9b9b;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listIconesCaracteristicos {
+    display: flex;
+    color: #9d9b9b;
+}
+
+.elListIconesCaracteristicos {
+    padding: 2px 16px;
+    font-size: 15px;
+}
+
+
+
+
+/*============================== Banner ===============================*/
+.banner {
+    margin-top: 90px;
+    padding: 130px 0px;
+    background-color:#ebebeb;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalhoBanner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cabecalhoBanner p {
+    text-align: center;
+}
+
+.corpoBanner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0px 30px;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+.conteudoBanner {
+
+    border: 1px solid white;
+    width: 100%;
+    margin: 0px 16px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px black;
+    border-radius: 2px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:50px 30px;
+
+}
+
+.conteudoBannerHome {
+    font-size:13px;
+    text-align:center;
+    width:100%;    
+}
+
+.conteudoBanner img {
+    width:70px;
+    height:70px;
+}
+
+.conteudoBanner span {
+    font-size:14px;
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    color:#011636;
+    text-align: center;
+    padding:18px 0px;
+}
+
+
+/*===================== Fim da formatação do corpo Central da Página inicial ===============================*/
+
+
+
+
+
+
+
+
+/*============ Início da formatação do Rodapé ==============*/
+
+
+/*======== CONTEINERS =========*/
+.contentorGeralFooter {
+    background-color:  var(--cor-base-secundaria);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.divFooter {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*===== Formatando Adicionar Imóvel no rodape =====>*/
+.divElementoRodape1 {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--text-color);
+    margin-bottom: 20px;
+}
+.listaAdd {
+    display: flex;
+    padding-left: 0 !important;
+}
+.linkAddImovel {
+    color: white;
+    font-size: 18px;
+}
+.iconeAddImovel {
+    font-size: 18px;
+    color: white;
+}
+.incrementoLinkAdd {
+    font-size: 14px;
+}
+
+/*============= Formatando Menus do rodapé =====> */
+.divElementoRodape2 {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--text-color);
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+}
+.contentorListaMenuRodape{
+    width: 100%;
+    display: grid;    
+    padding: 40px 0pxx  ;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px ) {
+    
+   div.contentorListaMenuRodape{
+        width: 100%;
+        display: grid;    
+        padding: 40px 0px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    div.contentorConteudoFooter {
+        display: flex;
+    }
+
+    form.formBuscaImovel {
+        flex-direction: column;
+    }
+    div.contentorElementoForm {
+        margin: 8px 0px;
+        width: 80%;
+    }
+
+
+     div.menuSection {
+        display: none !important;
+    }
+
+    div.corpoBanner {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    div.contentorCadaBanner {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+    
+}
+
+@media (max-width: 550px ) {
+     
+     div.contentorCadaBanner {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+
+    }
+
+}
+
+@media (max-width: 650px ) {
+
+    div.contentorCardImovelD.acitveCardImovelD {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    div.cardImovelD {
+        width: 100% !important;
+    }
+}
+
+
+@media (max-width: 992px ) {
+
+    div.contentorConteudoFooter {
+        display: flex;
+        flex-direction: column;
+    }    
+}
+
+
+
+
+
+@media (max-width: 500px) {
+    
+   div.contentorListaMenuRodape{
+        width: 100%;
+        display: grid;    
+        padding: 40px 0px;
+        grid-template-columns: 1fr;
+    }
+
+    div.corpoBanner {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+
+}
+
+
+
+.divRodapeSobre p {
+    width: 80%;
+}
+
+.listaRodapeGeral {
+    
+}
+
+.listaRodape2 {
+    margin-right: 90px;
+}
+
+.listaRodape1 {
+    margin-right: 90px;
+}
+
+.tituloMenuRodape {
+    font-weight: 400 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 18.72px !important;
+}
+
+.linkMenuRodape {
+    color: white;
+    display: block;
+    padding: 10px 0px;
+}
+
+.divNewsletter {
+    padding-top: 30px;
+}
+
+.formularioNewsletter {
+    position: relative;
+}
+
+.inputEmailNewsletter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 16px; 
+    font-family: 'DM sans',sans-serif;
+    background-color: white;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 4px;
+    color: var(--cor-base-secundaria);
+}
+
+.btNewsletter {
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    padding: 8px 16px;
+    background-color: var(--base-color);
+    z-index: 3;
+    color: white;
+    border: 1px solid var(--base-color);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.paragrafoNewsletter {
+    color: white;
+    padding-bottom: 15px;
+}
+
+.divElementoRodape3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contentorConteudoFooter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tituloSite {
+    color: white;
+    font-size: 28px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.fundoFooter {
+    font-size:0.8125rem;            
+    padding:0.125rem 0.375rem; 
+    background-color: #817f7f;
+    margin:0.125rem 0.25rem;
+    border-radius:4px;
+    color:#fff;
+}
+
+/*============ Fim da formatação do Rodapé ==============*/                                                      
+
+
+/* ********************** Estilo do input igual do google ********************** */
+
+.styleGoogle {
+    position:relative;    
+    height:34px;    
+}
+
+.inputGoogle {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    font-size:13px;
+    border:1.5px solid rgb(72, 72, 72);    
+    border-radius:4px;
+    outline:none;
+    padding:1rem;    
+}
+
+.labelStyleGoogle {
+    position: absolute;
+    left:10px;
+    top:7px;
+    padding:0 .25rem;
+    background-color: #fff;
+    color:rgb(75, 75, 75);
+    font-size:14px;
+    transition: .3s;
+    z-index:1;
+    cursor:text;
+    transition:top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+}
+
+.inputGoogle:focus {
+    border:1.5px solid var(--base-color);
+}
+
+
+.inputGoogle:focus ~ .labelStyleGoogle,
+.inputGoogle:not(:placeholder-shown).inputGoogle:not(:focus) ~ .labelStyleGoogle{
+    top:-8px;
+    font-size:12px;
+    left:3px;
+    color:var(--base-color);
+}
+
+
+/* ======================== Estilizando o select ============================ */
+
+
+
+
+
+
+
+
+/*============================== Formatando a área das testemunhas /*==============================*/
+
+.sectionTestemunha {
+    background-color: #e2e2e2;
+}
+
+.contentorGeralTestemunha {
+   padding: 130px 0px;
+}
+
+.contentorUnicoTestemunha {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contentorCardTestemunha {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0px 30px;
+}
+
+.cardTestemunha {
+    width: 280px;
+    height: 230px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.mensagemTestemunha p {
+    font-size: 15px;
+    color: #5b5b5b;
+}
+
+.perfilTestemunha {
+    width: 190px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(60%);
+}
+
+.perfilTestemunha span {
+    font-size: 19px;
+    font-weight: bold;
+    color: #000c2a;
+}
+
+.perfilTestemunha img  {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ffffff;
+}
+
+/*========================================  * Formatação dos Cards da Cidades   /*========================================*/
+
+.contentorGeralCidades {
+    width: 100%;
+}
+
+.sectionCidades {
+
+}
+.contentorGeralCidades {
+    padding: 120px 0px;
+}
+
+.contentorGeralCidades {
+    display: flex;
+    justify-content: center;
+}
+
+.contentorCards {
+    margin-top: 80px;
+    width: 100%;
+    display: grid;    
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px 20px;
+}
+
+.contentorCidades {
+    width: 100%;
+}
+
+.componenteCidade {
+    width: 100%;
+}
+
+.cardCidade {
+    display: flex;
+    width: 100%;
+    height:  180px;
+}
+
+.cidadeImg {
+    width: 169px;
+    height: 165px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.cidadeImg img {
+   width: 100%;
+   height: 100%;
+   border-radius: 8px;
+}
+
+.conteudoCidade {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: Center;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+.acidade {
+    font-size: 19px;
+    font-weight: 500;
+    color: #001a2a;
+}
+
+.osImoveis {
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===================================================================================================================================================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================== Início da Formatação da página de Adicionar Imóvel ===============================*/
+
+
+
+
+
+.contentorInicialPubImovel {
+    width: 100%;    
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #c1c2c2;
+
+}
+
+.gradiente {
+    background-color: linear-gradient(0deg, #0703fa, transparent);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.linhaPublicaImovel {    
+
+     
+}
+.headerPublicaImovelAdd {
+    height: 110px;
+    padding-top: 10px;
+    
+}
+/*=============== Elementos da do subHeader /*===============*/ 
+
+.linhaEnderecoPosicao a {
+    font-size: 14px;
+}
+
+.linhaEnderecoPosicao a.enderecoOrigem  {
+    color: #1e1e1e;
+    font-weight: 700;
+}
+ 
+
+.linhaAddImovel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.tituloHeader {
+    padding-bottom: 6px;
+    border-bottom:2px solid #b6b7b8;
+
+}
+
+
+
+.tabelaPacotePreco {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "tabela instrucao";
+}
+.contentorPacoteAdd {
+    grid-area: tabela;
+}
+.instrucaoPacote {
+    grid-area: instrucao;
+    width: 100%;
+}
+.tabelaPrecoPacote {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+    box-shadow: 0 10px 25px #8b8b8c;
+    border-radius: 4px;
+}
+.planosAdd {
+    color: #408fc2;
+}
+
+.tituloTabela {
+    font-size: 35px;
+    font-weight: 400;
+    padding-left: 15px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.planosAdd {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0px;
+}
+.precoAdd {
+    text-align: center;
+    padding: 10px 0px;
+    color: #01183d;
+}
+
+.conteudoTbAdd {
+    text-align: left;
+    padding: 5px 0px;
+}
+.conteudoTbAddC {
+    text-align: center;
+    padding: 5px 0px;
+}
+.bordaTb {
+    border-top: 1px solid #c8c9ca;
+    border-bottom:  1px solid #c8c9ca;
+
+}
+.aquiMarginLeft {
+    margin-left: 10px;
+}
+.aquiMarginRight {
+    margin-right: 10px;
+}
+.divTd {
+    padding: 15px 0px;
+}
+.divTdE {
+    padding: 8px 0px;
+}
+.conteudoTbAddC i {
+    color: #0b56d1;
+}
+.btnSelectPacote {
+    padding: 12px 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px 0px;
+    display: block;
+    transition: .2s;
+    text-align: center;
+}
+.selecionadoRadio  {
+     background-color: #0b56d1;
+     color: white;
+     border: 1px solid #0b56d1;
+}
+.decelecionadoRadio {
+     background-color: #ffffff;
+     border: 1px solid white;
+     box-shadow: 0px 0px 3px 0px black;
+     color: black;
+}
+.paraBtnSelect {
+    margin: 0px 8px;
+}
+.btnSelectPacote:hover {
+    background-color: white;
+    box-shadow: 0px 0px 2px 0px black;
+    color: #171717;
+}
+.btnSelectPacote:active {
+    background-color: #175dd0;
+}
+
+.btnSelectPacote i {
+    color: white;
+}
+.btnSelectPacote:hover i {
+    color: #171717;
+}
+.divRadioPacote {
+    background-color: #0b46a7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    margin: 16px 4px; 
+}
+.divRadioPacote input {
+    margin-right: 10px;
+}
+.divRadioPacote label {
+    color: white;
+}
+.instrucao {
+    margin-top: 30px;
+    width: 100%;
+}
+.divIntruirAddHouse {
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid orange;
+    width: 100%;
+}
+.divIntruirAddHouse div {
+    border: 1px solid black;
+
+}
+
+.divNumeroPasso {
+    width: 80%;
+}
+
+
+
+/*=============================== Fim Formatação da página de Adicionar Imóvel ===============================*/
+
+
+
+
+/*===================================  * Banner Tipos de Imóveis *   =====================================*/
+
+.sectionBannerTI {
+	margin: 120px 0px;
+
+}
+.sectionSite {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.linhaBannerTI  {
+	padding: 80px 60px;
+}
+
+.contentorCadaBanner {
+	margin-top: 120px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 0px 30px;
+}
+
+.cardBannerTI {
+	
+}
+
+.cardBannerTI {
+	
+}
+
+
+.linkBannerTI {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 370px;	 	
+	border-radius: 8px;
+	position: relative;
+	border: 1px solid white;	
+}
+.linkBannerTI::after {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 8px;
+	z-index: -1;
+
+}
+.linkBannerTI:hover::after  {
+	background-color: #0d328f;
+	transition: .6s;
+}
+
+.conteudoBTI {
+	width: 100%;
+}
+
+.ct-imgBTI {
+	width: 100%;
+	padding: 3px 0px;
+	display: flex;
+	justify-content: Center;
+	align-items: center;
+	z-index: 10;
+}
+
+.ct-textoBTI {
+	width: 100%;
+	display: flex;
+	justify-content: Center;
+	align-items: center;
+	padding: 10px 0px;
+	z-index: 10;
+
+}
+.contentorImgBannerTi {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.ct-imgBTI div {
+	width: 50px;
+	height: 50px;
+}
+.ct-imgBTI div img {
+	z-index:  1000;
+}
+.contentorImgBannerTi img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;	
+	border-radius: 8px;
+}
+.ct-textoBTI span {
+	color: #ffffff;
+	font-size: 24px;
+	z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*===================================================================================================================================================================================================*/
+
+
+
+/* ============= Responsividade =============  */
+
+
+
+@media (max-width: 890px ) {
+
+    div.inforMenu {            
+        display: none;
+    }
+
+    div.contentorMenu {
+        height:90px;
+    }
+
+    nav.nav {
+        width: 400px;
+        position: absolute;
+        top: 90px !important;
+        right: 0;
+        z-index: 10;
+        background-color: #d8d8d8;
+        transform: translateX(100%);
+    }
+
+}
+
+
+.btResponsividade {
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 4px;
+    display: none;
+}
+
+.linhaResponsiva {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: #1437d0;
+}
+.activaNav {
+    transform: translateX(0%) !important;
+}
+
+@media (max-width: 1099px ){
+
+    div.btResponsividade {
+        cursor: pointer;
+        display: block !important;    
+    }
+
+    ul.listaMenu {
+        display:flex;
+        list-style:none;
+        position:relative;
+        flex-direction: column;
+    }
+
+    ul.listaMenu li {
+
+        margin: 12px 0px;
+
+    }
+    
+    nav.nav {
+        width: 400px;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        z-index: 10;
+        background-color: #d8d8d8;
+        transform: translateX(110%);
+        transition: transform 0.5s ease-in;
+
+    }
+
+    ul.subMenu {       
+        position:relative;
+    }
+
+
+}
+
+@media (max-width: 490px ) {
+    nav.nav {
+        width: 88% !important;
+        position: absolute;
+        top: 130px;
+        right: 0;
+        z-index: 10;
+        background-color: #d8d8d8;
+        transform: translateX(100%);
+    }
+
+    div.contentorElementoForm {
+        width: 98%;
+    }
+
+}
+
+
+.carousel-item {
+    height: 550px !important;
+    position: relative !important;
+}
+.carousel-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+@media (max-width:  288px ) {
+    .listaInforImovel {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 1250px ) {
+
+    div.cardImovelD {
+        width: 100%;
+    }
+
+
+    div.contentorCardImovelD.acitveCardImovelD {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px 20px;
+        width: 100%;
+        animation: fade 1s ease;
+    }
+}
+
+@media (max-width: 992px ){
+    div.contentorCardImovelD.acitveCardImovelD {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px 20px;
+        width: 100%;
+        animation: fade 1s ease;
+    }
+}
+
+@media (max-width: 1023px ) {
+    div.cardImovelD {
+        width: 90%;
+    }
+}
+
+@media (max-width: 690px ){
+
+    div.cardCidade {
+        position: relative;
+    }
+    
+    div.contentorCards {    
+        grid-template-columns: 100%;
+    }
+}
+
+.conteudoCidadeHover {
+    display: none;
+}
+@media (max-width: 390px ) {
+
+    div.conteudoCidade {
+        display: none !important;        
+    }
+
+    div.cidadeImg {
+        width: 100%;
+        height: 230px;
+    }
+
+    div.contentorCards {    
+        grid-gap: 90px 20px;
+    }
+
+    div.conteudoCidadeHover {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        color: white;
+
+    }
+
+    div.conteudoCidadeHover span{
+        
+        margin: 8px 0px;
+
+    }
+
+    div.conteudoCidadeHover i{        
+        font-size: 16px;
+    }
+
+}

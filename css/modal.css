@@ -1,0 +1,603 @@
+
+
+
+/* ************************ Modal para Salvar imóvel ************************ */
+
+/* ****************   Body da Modal **************** */
+
+
+/* ===> Elemento do Body da Modal*/
+/* ***********  Contentor BodyGeralIm ******** ***/
+.bodyGeralIm {
+    width:100vw;
+}
+
+/* ===> Elemento do bodyGeralIm*/
+/* ***********  Contentor modalDash ******** ***/
+/*Im significa Imóvel abreviatura criada por: Lenister*/
+.formDashImovel {
+
+}
+.modalDash {
+    width:100%;
+    padding:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-areas:"resumoIm bodyInputs bodyInputs"
+                        "bodyActionIm bodyActionIm bodyActionIm";
+    grid-gap:10px;
+    background-color: white;
+    border-radius: 6px;
+}
+.modalDash-user  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ===> Elementos da modalDash*/
+/* ***********  Contentor caixaModalDash ******** ***/
+/*Im significa Imóvel abreviatura criada por: Lenister*/
+.caixaModalDash {
+    width:100%; 
+    
+}
+.caixaAlturaIm {
+    height:800px;
+    background-color:white;
+    border-radius:6px;
+}
+.caixaAlturaImUser {
+    height: 360px;
+    background-color:white;
+}
+.caixaModalDash-imovelResumo {
+    grid-area: resumoIm;
+    padding:8px;
+    position:relative;
+}
+
+.caixaModalDash-inforCentral {
+    grid-area: bodyInputs;
+}
+.caixaModalDash-btnAcoes {
+    grid-area: bodyActionIm;
+    height:60px;
+}
+
+
+
+/* ===> Elementos da caixaModalDash-imovelResumo*/
+/* ***********  Contentor divResumoIm-divImg ******** ***/
+/*Im significa Imóvel abreviatura criada por: Lenister*/
+.divResumoIm-divImg {
+    width:100%;
+    height:190px;
+    background-color:#d2d2d2;
+    border-radius:4px;
+    position:relative;
+}
+
+
+/* ===> Elementos da divResumoIm-divImg*/
+/* ***********  Contentor caixaImgResumo ******** ***/
+.caixaImgResumo {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+    border-radius:4px;
+}
+.apresentaImgNow {
+    z-index:1;
+}
+.caixaImgResumo img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+#fileCloudIm {
+    display:none;
+}
+.linkPuxaCloud {
+    width:100%;
+    height:190px;
+    border-radius:4px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    color:var(--base-color);
+    cursor:pointer; 
+}
+.linkPuxaCloud:hover {
+   color:rgb(93, 92, 92);
+}
+.conteudoIconeCloud i {
+    font-size:32px;
+}
+.conteudoTextCloud  {
+    text-align:center;
+    font-size:13px;
+}
+.textoDadosImResumo {
+    font-size:14px;
+    color:rgb(14, 14, 14);
+}
+.conteudoContentorImResumo  {
+    height:290px;
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    flex-direction:column;
+    padding:15px 0px 0px 0px;
+}
+
+.dadosImoveisResumo-parte2 {
+     padding-top:20px;
+    border-top:3px solid rgb(176, 175, 175);
+}
+.resulImResumo {
+    font-weight:700;
+}
+.textoDadosImResumo-valor {
+    font-weight:700;
+    font-size:18px;
+    color:rgb(26, 139, 66);
+}
+
+
+
+/* ===> Elementos da caixaModalDash-inforCentral*/
+/* ***********  Contentor caixaHeaderImBody ******** ***/
+.caixaHeaderImBody {
+    width:100%;
+    height:40px;
+    display:flex;
+    align-items:center;
+    padding:0px 6px;
+}
+.caixaHeaderImBody nav {
+    width:100%;
+    padding-bottom:10px;
+    padding-top:10px;
+    border-bottom:2px solid rgb(187, 187, 187);
+}
+.linkNavIm {
+    font-size:14px;
+    color:rgb(121, 120, 120);
+    padding:8px 22px;
+    cursor:pointer;
+    transition:all 0.4s;
+    position: relative;
+    border-radius:3px;
+}
+.linkNavIm:hover {
+    background-color:rgb(130, 173, 209);
+}
+.linkNavIm i {
+    font-size:16px;
+}   
+
+.linkNavIm-fun {
+    font-size:14px;
+    color:rgb(121, 120, 120);
+    padding:8px 22px;
+    cursor:pointer;
+    transition:all 0.4s;
+    position: relative;
+    border-radius:3px;
+}
+
+.linkNavIm-fun:hover {
+     background-color:rgb(130, 173, 209);
+}
+.linkNavIm-fun i {
+    font-size:16px;
+}   
+
+.linkNavIm-user  {
+    font-size:14px;
+    color:rgb(121, 120, 120);
+    padding:8px 22px;
+    cursor:pointer;
+    transition:all 0.4s;
+    position: relative;
+    border-radius:3px;
+}
+
+.linkNavIm-user:hover {
+     background-color:rgb(130, 173, 209);
+}
+.linkNavIm-user i {
+    font-size:16px;
+}   
+
+
+
+
+/* ===> Elementos da caixaModalDash-inforCentral*/
+/* ***********  Contentor caixaBodyImBody ******** ***/
+.caixaBodyImBody {
+    position:relative;
+}
+
+
+
+/*===> Para alterar o painel do imóvel*/
+.caixaFormIm {    
+    /*display: none;*/
+}
+/*===> Para alterar o painel do imóvel*/
+
+
+.caixaFormIm-imovel {    
+    display: none;
+}
+.caixaFormIm-fun {    
+    display: block !important;
+    animation: fadeInput 1s ease;
+}
+.caixaFormIm-user {    
+    display: block !important;
+    animation: fadeInput 1s ease;
+}
+
+
+
+/*===> Para alterar o painel do imóvel*/
+.caixaFormIm-alter-imovel {    
+    display: block !important;
+    animation: fadeInput 1s ease;
+}
+/*===> Para alterar o painel do imóvel*/
+
+
+
+.actL{
+    background-color:rgb(40, 107, 215);
+    color:white;
+}
+
+.actC {
+    display: block !important;
+    animation: fadeInput 1s ease;
+}
+
+@keyframes fadeInput {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*===> Para alterar o painel do imóvel*/
+
+
+.actL-alt-imovel{
+    background-color:rgb(40, 107, 215);
+    color:white;
+}
+
+.actC-alt-imovel {
+    display: block !important;
+    animation: fadeInputAlterImovel 1s ease;
+}
+
+@keyframes fadeInputAlterImovel {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/*===> Para alterar o painel do imóvel*/
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************* Componentes das caixaFrom  ************************************* */
+
+.ctDivForm {
+    display:flex;  
+    justify-content:space-between;
+    padding:16px 8px;
+}
+.ct-div-form-cad-fun  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+    grid-gap: 45px 30px;
+}
+.medioInput {
+    width:35%;
+}
+.grandeInput {
+    width:60%;
+}
+.selectCondicaoIm {
+    width:100%;
+    height:100%;
+    color:rgb(24, 24, 24);
+    outline:none;
+    border:1.25px solid rgb(91, 89, 89);
+    font-size:15px;
+    border-radius:4px;
+}
+.divNegocio {
+    display:flex;
+    justify-content:space-between;    
+}   
+.divNegocioIm {
+    width:25%;
+    
+    height:30px;
+}
+.continuaInputsIm {
+    width:75%;
+    
+    display:flex;
+    flex-direction:column;
+}
+.linhaIm1 {
+    display:flex;
+    justify-content:space-between;
+}
+.medioInputLinhaIm1 {
+    width:47%;
+}
+.linhaIm2 {
+    padding-top:20px;
+    height:140px;
+    
+    position:relative
+}
+.divDescIm {
+    width:100%;
+    height:100%;
+}
+.textDesc {
+    display:block;
+    width:100%;
+    height:100%;
+    padding:6px;
+    font-size: 15px;
+    font-family:'DM sans', sans-serif;
+    border-radius:4px;
+}
+
+/*======== Estilizando o checkBox ==========*/
+
+.contentorCheckNeg {
+    margin-top:20px;
+}
+
+/*================================ Dados do Negócio ============================*/
+.labelCheck {
+    font-size:13px;
+}
+
+
+.pub {
+    color:rgb(16, 16, 16);
+    font-weight:500;
+}
+.dadosNegocio {
+    width:100%;
+    border-top:2px solid rgb(182, 182, 182);
+}
+.divDadosNego {
+    display:none;
+}
+.apresentaDados {
+    display:block;
+    animation: fadeNegocio 0.6s ease;
+}
+
+@keyframes fadeNegocio {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*============ Contentor Venda ==============*/
+
+.contentorVenda {
+    display:flex;
+    flex-direction: column;
+    padding-top:15px;
+}
+.selectPropriedade {
+    width:37%;
+}
+.linhaVenda1 {
+    display:flex;
+    height:50px;
+    width:100%;
+    align-items:center;
+    justify-content:space-between;
+}
+.componeteVenda1 {
+    height:100%;
+    width:40%;
+}
+.componeteVenda2 {
+    height:100%;
+    width:60%;
+    display:flex;
+    align-items:center;
+    padding-left:20px;
+    justify-content:space-between;
+}
+.tamanhoInputValor {
+    width:65%;
+}
+.linhaVenda2 {
+    display:flex;
+    width:100%;
+    align-items:center;
+    height:60px;
+}
+.tamanhoInputComissao {
+    width:40%;
+    margin-right:20px;
+}
+.resultadoComissao {
+    font-size:13px;
+    color:rgb(32, 32, 32);
+    font-weight:700;
+}
+
+
+
+
+/*=============================  Áreas para ações da modal inteira  =============================*/
+.contentorBtnModalIm{
+    display:flex;
+    justify-content:flex-end;
+    width:100%;
+    height:100%;
+}
+.btnModalIm {
+    font-size:14px;
+    padding:2px 16px;
+    height:35px;
+    margin:0px 10px;
+    border-radius:4px;
+    outline:none;
+    cursor:pointer;
+    transition:all 0.2s ease-in;
+}
+
+.btnModalIm-cancelar {
+    background-color:rgb(50, 50, 50);
+    border:1px solid rgb(50, 50, 50);
+    color:white;
+}
+.btnModalIm-alterar {
+    background-color: #1f9f58;
+    border:1px solid #1f9f58;
+    color: white;
+}
+.btnModalIm-salvar {
+    background-color:rgb(14, 45, 198);
+    border:1px solid rgb(14, 45, 198);
+    color:white;
+}
+/*======================== Hover dos botões ========================*/
+.btnModalIm:hover {
+    background-color:white;
+    border:1px solid white;
+    box-shadow: 0px 0px 3px 0px black;
+}
+.btnModalIm-cancelar:hover  {    
+    color: rgb(50, 50, 50);
+}
+.btnModalIm-alterar:hover {
+    color:rgb(28, 117, 65);
+}
+.btnModalIm-salvar:hover {
+    color:rgb(14, 45, 198);
+}
+
+
+/*======================== Contentores de Enderço ======================== */
+.contentorInputEndereco {
+    width:100%;
+    margin:30px 0px;
+    padding:0px 20px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-gap:20px 8px;
+}
+.todoInputsEndereco {
+    width:100%;
+}
+
+.contentorInputCaracteristica {
+    width:100%;
+    margin:30px 0px;
+    padding:0px 20px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-gap:20px 8px;
+}
+
+
+
+/*==================== Modal para Cadastro de funcionário ======================*/
+
+.ct-div-form-cad-user  {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap: 40px 15px;
+    padding: 25px;
+}
+.ct-div-form-tipoFun {
+    display: grid;
+    grid-template-columns:1fr;
+    grid-gap: 40px 15px;
+    padding: 25px;
+}
+
+.ct-grandeInput {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================== Modal Para alterar imagens  =============================== */
+
+
+
+.contentorModalImgImovel {
+    border-radius: 6px;
+	background-color: white;
+	width: 45%;
+}
+
+
+
+

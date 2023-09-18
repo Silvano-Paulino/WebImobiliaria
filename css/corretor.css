@@ -1,0 +1,82 @@
+
+
+
+
+
+/*======================== FOrmatando os cartões da tela inicial do corretor =========================*/
+
+.contentorCardDashCorretor {
+	display: flex;
+	width: 100%;
+	justify-content: center;			
+}
+
+.linhaCard1 {
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+}
+.linhaCard1 span {
+	font-size: 14px;
+	color: #676565;	
+}
+.tituloDivisorio1 {
+	margin-top: 10px;
+}
+div.cardDash .contentorIconeCardDash i.iconeCardDashCorretor  {
+	font-size: 40px;
+	padding-left: 20px;
+	color: #cc1b1b;
+}
+.inativoCardCorretor {
+	border-left: 4px solid #cc1b1b;
+}
+
+.CardAgendaCorretor {
+	width: 300px;
+	height: 120px;
+	padding: 10px;
+	background-color: white;
+	background-color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.areaCard1Corretor {
+	display: flex;
+	flex-direction: column;
+}
+
+.areaCard1Corretor span.span1CorretorCard {
+	color: red;
+	font-size: 20px;
+}
+
+.areaCard2Corretor span.span2CorretorCard {
+	font-size: 9px;
+}
+.areaCard2Corretor {
+	display: flex;
+	flex-direction: column;
+
+}
+.areaCard2Corretor i {
+	font-size: 28px;
+	color: red;
+}
+.bordaCorretorDash {
+	border-left: 4px solid red;
+}
+
+.margin-leftCard {
+	margin-left: 35px;
+}
+
+.contentorMaisTabela {
+	width: 100%;	
+	height: 20px;
+	border: 1px solid black;
+}
+
